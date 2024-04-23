@@ -1,5 +1,5 @@
-#ifndef Bit_Utilies
-#define Bit_Utilies
+#ifndef Bit_Utilities
+#define Bit_Utilities
 
 #define TOGGLE_BIT(reg,bit) reg^=(1<<bit)
 #define READ_BIT(reg,bit) (reg&(1<<bit))>>bit
