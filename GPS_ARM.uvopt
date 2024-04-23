@@ -215,7 +215,7 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>228</TopLine>
+      <TopLine>229</TopLine>
       <CurrentLine>234</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\startup_TM4C123.s</PathWithFileName>
@@ -232,7 +232,7 @@
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>1</TopLine>
-      <CurrentLine>1</CurrentLine>
+      <CurrentLine>2</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\APP\APP.c</PathWithFileName>
       <FilenameWithoutPath>APP.c</FilenameWithoutPath>
