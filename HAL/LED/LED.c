@@ -21,18 +21,12 @@ void LED_LedOn(unsigned char copy_LedColour) {
     switch (copy_LedColour) {
         case LED_BLUE:
             GPIO_PORTF_DATA_R |= (1 << LED_BLUE_PIN);
-						GPIO_PORTF_DATA_R &= ~(1 << LED_RED_PIN);
-						GPIO_PORTF_DATA_R &= ~(1 << LED_GREEN_PIN);
             break;
         case LED_GREEN:
             GPIO_PORTF_DATA_R |= (1 << LED_GREEN_PIN);
-						GPIO_PORTF_DATA_R &= ~(1 << LED_BLUE_PIN);
-						GPIO_PORTF_DATA_R &= ~(1 << LED_RED_PIN);
             break;
         case LED_RED:            
             GPIO_PORTF_DATA_R |= (1 << LED_RED_PIN);
-						GPIO_PORTF_DATA_R &= ~(1 << LED_BLUE_PIN);
-						GPIO_PORTF_DATA_R &= ~(1 << LED_GREEN_PIN);
             break;
         default:
             // Error state 
