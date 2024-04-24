@@ -11,7 +11,6 @@
 
 unsigned char button_in;
 unsigned char button_prev = 0x10;
-unsigned char PORTF       = 'F';
 
 
 
@@ -40,6 +39,7 @@ unsigned char SW_Read(unsigned char S)
     switch (S)
     {
     case SW1:
+    
         return GPIO_PORTF_DATA_R &SW1;
         break;
     case SW2:
@@ -69,7 +69,7 @@ bool SW_ispressed(unsigned char S)
 
     case SW2:
         button_in = SW_Read(SW2);                        
-        if (button_prev != 0x10 && button_in == 0x10)   //rising edge
+        if (button_prev != 0x01 && button_in == 0x01)   //rising edge
             return true;
         else 
             return false;
