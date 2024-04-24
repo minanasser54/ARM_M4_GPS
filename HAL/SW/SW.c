@@ -10,7 +10,7 @@
 
 
 unsigned char button_in;
-unsigned char button_prev = 0x10;
+unsigned char button_prev;
 
 
 
