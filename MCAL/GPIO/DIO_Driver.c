@@ -57,6 +57,7 @@ void DIO_vPORTINIT(unsigned char portname){
 			GPIO_PORTF_CR_R |= 0xFF;
 			GPIO_PORTF_DEN_R |= 0xFF;
 			GPIO_PORTF_AMSEL_R &= ~0xFF;
+			GPIO_PORTF_PUR_R    = 0x11;
 			break;
 	}
 }
