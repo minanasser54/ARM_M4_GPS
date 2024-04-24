@@ -29,50 +29,11 @@
  *
  */ 
 void LED_LedInit(void);
-/** \brief	The function LED_LedOn turns on one of three LEDs based on the value of the argument copy_u8LedColour, 
- *			which can be LED_BLUE, LED_GREEN, or LED_RED.
- *
- *			The function uses a switch statement to determine which LED to turn on. 
- *			When the value of copy_u8LedColour matches one of the defined LED colors, the corresponding pin is set to 
- *			DIO_u8_HIGH using the DIO_u8SetPinValue function, which turns on the LED. 
- *			If the value of copy_u8LedColour does not match any of the defined colors, the function does nothing (default : break).
- *
- *			In summary, this function is part of a larger program that controls the behavior
- *			of the LEDs and is used to turn on one of the three LEDs.
- *
- * \param	The Color of the led you want to on it
- * \return	void
- *
- */
+
 void LED_LedOn(unsigned char copy_u8LedColour);	    
-/** \brief	The function LED_LedOff turns off one of three LEDs based on the value of the argument copy_u8LedColour, 
- *			which can be LED_BLUE, LED_GREEN, or LED_RED.
- *
- *			The function uses a switch statement to determine which LED to turn off. When the value of copy_u8LedColour matches 
- * 			one of the defined LED colors, the corresponding pin is set to DIO_u8_LOW using the DIO_u8SetPinValue function, which turns off the LED. 
- *			If the value of copy_u8LedColour does not match any of the defined colors, the function does nothing (default : break).
- *
- *			In summary, this function is also part of a larger program that controls the behavior of the LEDs and is used to turn off one of the three LEDs.
- *
- * \param	The Color of the led you want to off it
- * \return  void
- *
- */
+
 void LED_LedOff(unsigned char copy_u8LedColour);	      
-/** \brief	This is a function called LED_OffAll that turns off all three LEDs (blue, red, and green) 
- *			connected to a microcontroller. The function achieves this by calling a function called 
- *			DIO_u8SetPinValue three times, each time passing it the port and pin number of the LED to turn off, 
- *			as well as the value DIO_u8_LOW, which represents a logic low voltage level.
- *
- *			The DIO_u8SetPinValue function is likely a low-level function that interacts with the microcontroller's 
- *			hardware to set the voltage level of a specific pin. The port and pin numbers specified in the function 
- *			calls correspond to the specific pins of the microcontroller that are connected to the LEDs. By setting the voltage 
- *			level of these pins to logic low, the function effectively turns off all three LEDs.	
- *			
- * \param	void
- * \return  void
- *
- */
+
 void LED_OffAll(void);
 
 

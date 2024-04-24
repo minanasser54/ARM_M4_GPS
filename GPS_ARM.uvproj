@@ -415,6 +415,31 @@
               <FileType>1</FileType>
               <FilePath>.\APP\APP.c</FilePath>
             </File>
+            <File>
+              <FileName>LCD.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\HAL\LCD\LCD.c</FilePath>
+            </File>
+            <File>
+              <FileName>LED.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\HAL\LED\LED.c</FilePath>
+            </File>
+            <File>
+              <FileName>SW.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\HAL\SW\SW.c</FilePath>
+            </File>
+            <File>
+              <FileName>TFT.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\HAL\TFT\TFT.c</FilePath>
+            </File>
+            <File>
+              <FileName>DIO_Driver.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\MCAL\GPIO\DIO_Driver.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
