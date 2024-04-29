@@ -4,10 +4,10 @@ sw
 drawing & uart "pc side"
 uart0 done     "won't use uart1"
 gps parsing func  & distance func
+eeprom  "alfons"
 
 #still writed
 
-eeprom  "alfons"
 lcd  "a4raf"
 main "scheduled"
 flash loading steps & considerations "zoz"
