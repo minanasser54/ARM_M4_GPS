@@ -3,3 +3,6 @@
 float currentLongitude,currentLatitude,currentSpeed;
 void GPS_read();
 void GPS_format();
+float getCurrentLongitude();
+float getCurrentLatitude();
+float getCurrentSpeed();
