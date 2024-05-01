@@ -1,7 +1,9 @@
 #ifndef MAINfun_H
 #define MAINfun_H
-
-#include "tm4c123gh6pm.h"
+#include "../UTILITIES/tm4c123gh6pm.h"
+#include "../MCAL/GPIO/DIO_Driver.h"
+#include "../UTILITIES/Bit_Utilities.h"
+#include <stdbool.h>
 
 
 void mainProgram(void);

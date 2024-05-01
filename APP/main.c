@@ -1,10 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "tm4c123gh6pm.h"
+#include "../UTILITIES/tm4c123gh6pm.h"
+#include "../MCAL/GPIO/DIO_Driver.h"
+#include "../UTILITIES/Bit_Utilities.h"
+#include "mainFUN.h"
+#include "../MCAL/STK/SysTick.h"
+#include "../MCAL/UART0/UART0_PC.h"
+#include "../HAL/SW/SW.h"
+#include "../HAL/SW/ext_SW.h"
+#include "../HAL/GPS/GPS.h"
+#include "../HAL/LED/LED_interface.h"
 
 //destination of asu foe
-#define float finalCurrentA=100;
-#define float finalCurrentB=100;
+
 
 int main(void){
 
@@ -17,13 +25,14 @@ DIO_vPORTINIT(DIO_PORTE);
 DIO_vPORTINIT(DIO_PORTF);			
 
 
-sw_init();
-eeprom_init();
+ex_sw_init();
+//eeprom_init();
 UART0_INIT();
 SysTick_Init();
 LED_LedInit();
-SW_Init();
-LCD_init();
+SW_Init(SW1);
+SW_Init(SW2);
+//LCD_init();
 
 
 
@@ -63,18 +72,20 @@ while(1)
 
     distance=0;
     i=0;
-	LED_LedInit(LED_GREEN);
+		LED_LedInit();
+		LED_LedOn(LED_GREEN);
+
    
 
     if (SWex_ispressed())
     {
 
     for (int i = 0; i < array_size; i++)
- 	{eeprom_write(lon_lat[i],i,1)}
-    	 LED_LedInit(LED_RED);
+		{eeprom_write(lon_lat[i],i,1)}
+    LED_LedInit(LED_RED);
 
     if(UART0_read()=="U")
-	for(int i=0;i<lon_lat.length;i++)
+		for(int i=0;i<lon_lat.length;i++){
         UART0_write((char)lon_lat[i]);
     }
 

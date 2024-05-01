@@ -1,45 +1,64 @@
-
 #include <math.h>
-#define PI=3.14159265359;
-#define EARTH_RADIUS=6371000 //in meter
-#define PRESSED=0 //negative logic
+#include "../UTILITIES/tm4c123gh6pm.h"
+#include "../MCAL/GPIO/DIO_Driver.h"
+#include "../MCAL/STK/SysTick.h"
+#include "../HAL/SW/SW.h"
+#include "../HAL/SW/ext_SW.h"
+#include "../HAL/GPS/GPS.h"
+#include "../UTILITIES/Bit_Utilities.h"
+#include "../HAL/LED/LED_interface.h"
+
+//#define PI 3.14159265359;
+#define EARTH_RADIUS 6371000 //in meter
+#define PRESSED 0 //negative logic
+#define  finalCurrentA 100;
+#define  finalCurrentB 100;
 
 float destLongitude=0;
 float destLatitude= 0;
 char i=0;
-public float distance=0; // will be stored
+extern float distance; // will be stored
 char swich2=0; //use to check and increase
-float lon_lat[];
+float lon_lat[200];
 
 
-void mainProgram(){
-  	float currentLongitude=getCurrentLongitude();
-	float currentLatitude=getCurrentLatitude();
-
-	StoreINarray(currentLongitude,currentLatitude);
-
-if(destLongitude!=0 && destLatitude!=0)
-{
-	for (int i=0;i<swich2check();i++)
-{
-	 LED_LedInit( LED_BLUE );
-	 SysTick_Wait_Sec(10); //10s delay
-	 LED_LedOff( LED_BLUE );
-	 SysTick_Wait_Sec(10); //10s delay
 
 
-}
-    distance+=distance(currentLongitude, currentLatitude ,destLongitude  ,destLatitude); //data from gps
-    LCD_floating(distance); //display distance num on LCD 
-  }
+char swich2check(){
+    if(swich2>=4)
+        swich2=0;
 
-
-    destLongitude =currentLongitude;
-    destLatitude =currentLatitude;
-
-
+if ( SW_ispressed(SW2))
+    swich2++;
+    return swich2;
 }
 
+
+bool isDestination(void)
+{
+		bool x = false;
+		if ((finalCurrentA == currentLongitude) && (finalCurrentB == currentLatitude)){
+			x=true;
+		}
+    return x;
+}
+
+
+
+
+void   StoreINarray(float Long ,float Lat)
+{
+        lon_lat[i++]=Long;
+        lon_lat[i++]= Lat;
+        lon_lat[i++]=0;
+
+}
+
+
+bool SWex_ispressed(void){
+	return (ex_SW_Read()=='1') ? false : true;
+
+}
 
 
 float ToDeg(float Num)
@@ -53,7 +72,7 @@ return(degree+(minutes/60));
 
 float ToRad(float DegNum)
 {
-    return DegNum*PI/180;
+    return (DegNum*PI/180);
 }
 
 
@@ -79,39 +98,36 @@ return EARTH_RADIUS*Dis;
 
 
 
+void mainProgram(){
+  	float currentLongitude=getCurrentLongitude();
+	float currentLatitude=getCurrentLatitude();
 
+	StoreINarray(currentLongitude,currentLatitude);
 
-char swich2check(){
-    if(swich2>=4)
-        swich2=0;
-
-if ( SW_ispressed(SW2))
-    swich2++;
-    return swich2;
-}
-
-
-bool isDestination(void)
+if(destLongitude!=0 && destLatitude!=0)
 {
-    return (finalCurrentA==currentLongitude &&finalCurrentB==currentLatitude ) true ,false;
-}
-
-
-
-
-void   StoreINarray(float Long ,float Lat);
+	for (int i=0;i<swich2check();i++)
 {
-        lon_lat[i++]=Long;
-        lon_lat[i++]= Lat;
-        lon_lat[i++]=0;
+	 LED_LedInit();
+	 LED_LedOn(LED_BLUE);
+	 SysTick_Wait_Sec(10); //10s delay
+	 LED_LedOff( LED_BLUE );
+	 SysTick_Wait_Sec(10); //10s delay
+
+
+}
+    distance+=Distance(currentLongitude, currentLatitude ,destLongitude  ,destLatitude); //data from gps
+    //LCD_floating(distance); //display distance num on LCD 
+  }
+
+
+    destLongitude =currentLongitude;
+    destLatitude =currentLatitude;
+
 
 }
 
 
-bool SWex_ispressed(void){
-	return if(SW_Read()=="1") false:true;
-
-}
 
 
 

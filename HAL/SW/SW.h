@@ -1,7 +1,7 @@
 
 #ifndef __SW__
 #define __SW__
-
+#include <stdbool.h>
 
 
 #define  SW1      0x10

@@ -6,7 +6,7 @@
 #include "../../UTILITIES/tm4c123gh6pm.h"
 #include "ext_sw.h"
 
-void sw_init(void){
+void ex_sw_init(void){
 	
 	DIO_vPORTINIT(PORTA);
 	DIO_vSETPINDIR(PORTA,4,0);
@@ -16,7 +16,7 @@ void sw_init(void){
 	
 }
 
-unsigned char   SW_Read(void){
+unsigned char   ex_SW_Read(void){
 	
 	return GPIO_PORTA_DATA_R & ext_sw_mask;
 }

@@ -6,7 +6,7 @@
 #include <math.h>
 #include <string.h>
 /******************************< MCAL ******************************/
-#include "../../MCAL/UART1/UART5.h"
+#include "../../MCAL/UART5/UART5.h"
 /******************************< Global Variables *****************/
 float currentLongitude,currentLatitude,currentSpeed;
 char GPS_logName[]="$GPRMC,";
