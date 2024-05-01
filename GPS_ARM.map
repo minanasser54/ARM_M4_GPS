@@ -7,7 +7,177 @@ Section Cross References
     startup_tm4c123.o(RESET) refers to startup_tm4c123.o(STACK) for __initial_sp
     startup_tm4c123.o(RESET) refers to startup_tm4c123.o(.text) for Reset_Handler
     startup_tm4c123.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
-    app.o(.text) refers to strcmp.o(.text) for strcmp
+    sw.o(.text) refers to dio_driver.o(.text) for DIO_vPORTINIT
+    sw.o(.text) refers to sw.o(.data) for button_in
+    main.o(.text) refers to dio_driver.o(.text) for DIO_vPORTINIT
+    main.o(.text) refers to ext_sw.o(.text) for ex_sw_init
+    main.o(.text) refers to uart0_pc.o(.text) for UART0_INIT
+    main.o(.text) refers to uart5.o(.text) for UART5Init
+    main.o(.text) refers to systick.o(.text) for SysTick_Init
+    main.o(.text) refers to led.o(.text) for LED_LedInit
+    main.o(.text) refers to sw.o(.text) for SW_Init
+    main.o(.text) refers to mainfun.o(.text) for swich2check
+    main.o(.text) refers to mainfun.o(.data) for distance
+    main.o(.text) refers to mainfun.o(.bss) for lon_lat
+    mainfun.o(.text) refers to sw.o(.text) for SW_ispressed
+    mainfun.o(.text) refers to gps.o(.text) for getCurrentLongitude
+    mainfun.o(.text) refers to ext_sw.o(.text) for ex_SW_Read
+    mainfun.o(.text) refers to f2d.o(.text) for __aeabi_f2d
+    mainfun.o(.text) refers to dmul.o(.text) for __aeabi_dmul
+    mainfun.o(.text) refers to d2f.o(.text) for __aeabi_d2f
+    mainfun.o(.text) refers to sin.o(i.__hardfp_sin) for __hardfp_sin
+    mainfun.o(.text) refers to pow.o(i.__hardfp_pow) for __hardfp_pow
+    mainfun.o(.text) refers to cos.o(i.__hardfp_cos) for __hardfp_cos
+    mainfun.o(.text) refers to dadd.o(.text) for __aeabi_dadd
+    mainfun.o(.text) refers to sqrt.o(i.__hardfp_sqrt) for __hardfp_sqrt
+    mainfun.o(.text) refers to atan2.o(i.__hardfp_atan2) for __hardfp_atan2
+    mainfun.o(.text) refers to systick.o(.text) for SysTick_Wait
+    mainfun.o(.text) refers to mainfun.o(.data) for swich2
+    mainfun.o(.text) refers to mainfun.o(.bss) for lon_lat
+    gps.o(.text) refers to uart5.o(.text) for UART5_read
+    gps.o(.text) refers to strlen.o(.text) for strlen
+    gps.o(.text) refers to strtok.o(.text) for strtok
+    gps.o(.text) refers to strcpy.o(.text) for strcpy
+    gps.o(.text) refers to strcmp.o(.text) for strcmp
+    gps.o(.text) refers to atof.o(i.__hardfp_atof) for __hardfp_atof
+    gps.o(.text) refers to d2f.o(.text) for __aeabi_d2f
+    gps.o(.text) refers to gps.o(.data) for GPS_logName
+    gps.o(.text) refers to gps.o(.bss) for GPS
+    ext_sw.o(.text) refers to dio_driver.o(.text) for DIO_vPORTINIT
+    atan2.o(i.__hardfp_atan2) refers (Special) to iusefp.o(.text) for __I$use$fp
+    atan2.o(i.__hardfp_atan2) refers to dadd.o(.text) for __aeabi_dadd
+    atan2.o(i.__hardfp_atan2) refers to atan.o(i.atan) for atan
+    atan2.o(i.__hardfp_atan2) refers to ddiv.o(.text) for __aeabi_ddiv
+    atan2.o(i.__hardfp_atan2) refers to fabs.o(i.fabs) for fabs
+    atan2.o(i.__hardfp_atan2) refers to qnan.o(.constdata) for __mathlib_zero
+    atan2.o(i.__softfp_atan2) refers (Special) to iusefp.o(.text) for __I$use$fp
+    atan2.o(i.__softfp_atan2) refers to atan2.o(i.__hardfp_atan2) for __hardfp_atan2
+    atan2.o(i.atan2) refers (Special) to iusefp.o(.text) for __I$use$fp
+    atan2.o(i.atan2) refers to atan2.o(i.__hardfp_atan2) for __hardfp_atan2
+    atan2_x.o(i.____hardfp_atan2$lsc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    atan2_x.o(i.____hardfp_atan2$lsc) refers to dadd.o(.text) for __aeabi_dadd
+    atan2_x.o(i.____hardfp_atan2$lsc) refers to atan.o(i.atan) for atan
+    atan2_x.o(i.____hardfp_atan2$lsc) refers to errno.o(i.__set_errno) for __set_errno
+    atan2_x.o(i.____hardfp_atan2$lsc) refers to ddiv.o(.text) for __aeabi_ddiv
+    atan2_x.o(i.____hardfp_atan2$lsc) refers to fabs.o(i.fabs) for fabs
+    atan2_x.o(i.____hardfp_atan2$lsc) refers to qnan.o(.constdata) for __mathlib_zero
+    atan2_x.o(i.____softfp_atan2$lsc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    atan2_x.o(i.____softfp_atan2$lsc) refers to atan2_x.o(i.____hardfp_atan2$lsc) for ____hardfp_atan2$lsc
+    atan2_x.o(i.__atan2$lsc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    atan2_x.o(i.__atan2$lsc) refers to atan2_x.o(i.____hardfp_atan2$lsc) for ____hardfp_atan2$lsc
+    atof.o(i.__hardfp_atof) refers (Special) to iusefp.o(.text) for __I$use$fp
+    atof.o(i.__hardfp_atof) refers to errno.o(i.__read_errno) for __read_errno
+    atof.o(i.__hardfp_atof) refers to strtod.o(.text) for __strtod_int
+    atof.o(i.__hardfp_atof) refers to errno.o(i.__set_errno) for __set_errno
+    atof.o(i.__softfp_atof) refers (Special) to iusefp.o(.text) for __I$use$fp
+    atof.o(i.__softfp_atof) refers to errno.o(i.__read_errno) for __read_errno
+    atof.o(i.__softfp_atof) refers to strtod.o(.text) for __strtod_int
+    atof.o(i.__softfp_atof) refers to errno.o(i.__set_errno) for __set_errno
+    atof.o(i.atof) refers (Special) to iusefp.o(.text) for __I$use$fp
+    atof.o(i.atof) refers to errno.o(i.__read_errno) for __read_errno
+    atof.o(i.atof) refers to strtod.o(.text) for __strtod_int
+    atof.o(i.atof) refers to errno.o(i.__set_errno) for __set_errno
+    cos.o(i.__hardfp_cos) refers (Special) to iusefp.o(.text) for __I$use$fp
+    cos.o(i.__hardfp_cos) refers to errno.o(i.__set_errno) for __set_errno
+    cos.o(i.__hardfp_cos) refers to ddiv.o(.text) for __aeabi_ddiv
+    cos.o(i.__hardfp_cos) refers to dadd.o(.text) for __aeabi_dadd
+    cos.o(i.__hardfp_cos) refers to rred.o(i.__ieee754_rem_pio2) for __ieee754_rem_pio2
+    cos.o(i.__hardfp_cos) refers to sin_i.o(i.__kernel_sin) for __kernel_sin
+    cos.o(i.__hardfp_cos) refers to cos_i.o(i.__kernel_cos) for __kernel_cos
+    cos.o(i.__softfp_cos) refers (Special) to iusefp.o(.text) for __I$use$fp
+    cos.o(i.__softfp_cos) refers to cos.o(i.__hardfp_cos) for __hardfp_cos
+    cos.o(i.cos) refers (Special) to iusefp.o(.text) for __I$use$fp
+    cos.o(i.cos) refers to cos.o(i.__hardfp_cos) for __hardfp_cos
+    cos_x.o(i.____hardfp_cos$lsc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    cos_x.o(i.____hardfp_cos$lsc) refers to errno.o(i.__set_errno) for __set_errno
+    cos_x.o(i.____hardfp_cos$lsc) refers to dadd.o(.text) for __aeabi_dadd
+    cos_x.o(i.____hardfp_cos$lsc) refers to rred.o(i.__ieee754_rem_pio2) for __ieee754_rem_pio2
+    cos_x.o(i.____hardfp_cos$lsc) refers to sin_i.o(i.__kernel_sin) for __kernel_sin
+    cos_x.o(i.____hardfp_cos$lsc) refers to cos_i.o(i.__kernel_cos) for __kernel_cos
+    cos_x.o(i.____softfp_cos$lsc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    cos_x.o(i.____softfp_cos$lsc) refers to cos_x.o(i.____hardfp_cos$lsc) for ____hardfp_cos$lsc
+    cos_x.o(i.__cos$lsc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    cos_x.o(i.__cos$lsc) refers to cos_x.o(i.____hardfp_cos$lsc) for ____hardfp_cos$lsc
+    pow.o(i.__hardfp_pow) refers (Special) to iusefp.o(.text) for __I$use$fp
+    pow.o(i.__hardfp_pow) refers to dadd.o(.text) for __aeabi_dadd
+    pow.o(i.__hardfp_pow) refers to errno.o(i.__set_errno) for __set_errno
+    pow.o(i.__hardfp_pow) refers to dmul.o(.text) for __aeabi_dmul
+    pow.o(i.__hardfp_pow) refers to ddiv.o(.text) for __aeabi_ddiv
+    pow.o(i.__hardfp_pow) refers to sqrt.o(i.sqrt) for sqrt
+    pow.o(i.__hardfp_pow) refers to fabs.o(i.fabs) for fabs
+    pow.o(i.__hardfp_pow) refers to dunder.o(i.__mathlib_dbl_underflow) for __mathlib_dbl_underflow
+    pow.o(i.__hardfp_pow) refers to qnan.o(.constdata) for __mathlib_zero
+    pow.o(i.__hardfp_pow) refers to poly.o(i.__kernel_poly) for __kernel_poly
+    pow.o(i.__hardfp_pow) refers to dflti.o(.text) for __aeabi_i2d
+    pow.o(i.__hardfp_pow) refers to pow.o(.constdata) for .constdata
+    pow.o(i.__hardfp_pow) refers to cdrcmple.o(.text) for __aeabi_cdrcmple
+    pow.o(i.__hardfp_pow) refers to dscalb.o(.text) for __ARM_scalbn
+    pow.o(i.__hardfp_pow) refers to fpclassify.o(i.__ARM_fpclassify) for __ARM_fpclassify
+    pow.o(i.__softfp_pow) refers (Special) to iusefp.o(.text) for __I$use$fp
+    pow.o(i.__softfp_pow) refers to pow.o(i.__hardfp_pow) for __hardfp_pow
+    pow.o(i.pow) refers (Special) to iusefp.o(.text) for __I$use$fp
+    pow.o(i.pow) refers to pow.o(i.__hardfp_pow) for __hardfp_pow
+    pow.o(.constdata) refers (Special) to iusefp.o(.text) for __I$use$fp
+    pow_x.o(i.____hardfp_pow$lsc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    pow_x.o(i.____hardfp_pow$lsc) refers to dadd.o(.text) for __aeabi_dadd
+    pow_x.o(i.____hardfp_pow$lsc) refers to errno.o(i.__set_errno) for __set_errno
+    pow_x.o(i.____hardfp_pow$lsc) refers to ddiv.o(.text) for __aeabi_ddiv
+    pow_x.o(i.____hardfp_pow$lsc) refers to sqrt.o(i.sqrt) for sqrt
+    pow_x.o(i.____hardfp_pow$lsc) refers to fabs.o(i.fabs) for fabs
+    pow_x.o(i.____hardfp_pow$lsc) refers to dflti.o(.text) for __aeabi_i2d
+    pow_x.o(i.____hardfp_pow$lsc) refers to dmul.o(.text) for __aeabi_dmul
+    pow_x.o(i.____hardfp_pow$lsc) refers to qnan.o(.constdata) for __mathlib_zero
+    pow_x.o(i.____hardfp_pow$lsc) refers to poly.o(i.__kernel_poly) for __kernel_poly
+    pow_x.o(i.____hardfp_pow$lsc) refers to pow_x.o(.constdata) for .constdata
+    pow_x.o(i.____hardfp_pow$lsc) refers to cdrcmple.o(.text) for __aeabi_cdrcmple
+    pow_x.o(i.____hardfp_pow$lsc) refers to dscalb.o(.text) for __ARM_scalbn
+    pow_x.o(i.____softfp_pow$lsc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    pow_x.o(i.____softfp_pow$lsc) refers to pow_x.o(i.____hardfp_pow$lsc) for ____hardfp_pow$lsc
+    pow_x.o(i.__pow$lsc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    pow_x.o(i.__pow$lsc) refers to pow_x.o(i.____hardfp_pow$lsc) for ____hardfp_pow$lsc
+    pow_x.o(.constdata) refers (Special) to iusefp.o(.text) for __I$use$fp
+    sin.o(i.__hardfp_sin) refers (Special) to iusefp.o(.text) for __I$use$fp
+    sin.o(i.__hardfp_sin) refers to errno.o(i.__set_errno) for __set_errno
+    sin.o(i.__hardfp_sin) refers to ddiv.o(.text) for __aeabi_ddiv
+    sin.o(i.__hardfp_sin) refers to dadd.o(.text) for __aeabi_dadd
+    sin.o(i.__hardfp_sin) refers to rred.o(i.__ieee754_rem_pio2) for __ieee754_rem_pio2
+    sin.o(i.__hardfp_sin) refers to cos_i.o(i.__kernel_cos) for __kernel_cos
+    sin.o(i.__hardfp_sin) refers to sin_i.o(i.__kernel_sin) for __kernel_sin
+    sin.o(i.__softfp_sin) refers (Special) to iusefp.o(.text) for __I$use$fp
+    sin.o(i.__softfp_sin) refers to sin.o(i.__hardfp_sin) for __hardfp_sin
+    sin.o(i.sin) refers (Special) to iusefp.o(.text) for __I$use$fp
+    sin.o(i.sin) refers to sin.o(i.__hardfp_sin) for __hardfp_sin
+    sin_x.o(i.____hardfp_sin$lsc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    sin_x.o(i.____hardfp_sin$lsc) refers to errno.o(i.__set_errno) for __set_errno
+    sin_x.o(i.____hardfp_sin$lsc) refers to dadd.o(.text) for __aeabi_dadd
+    sin_x.o(i.____hardfp_sin$lsc) refers to rred.o(i.__ieee754_rem_pio2) for __ieee754_rem_pio2
+    sin_x.o(i.____hardfp_sin$lsc) refers to cos_i.o(i.__kernel_cos) for __kernel_cos
+    sin_x.o(i.____hardfp_sin$lsc) refers to sin_i.o(i.__kernel_sin) for __kernel_sin
+    sin_x.o(i.____softfp_sin$lsc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    sin_x.o(i.____softfp_sin$lsc) refers to sin_x.o(i.____hardfp_sin$lsc) for ____hardfp_sin$lsc
+    sin_x.o(i.__sin$lsc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    sin_x.o(i.__sin$lsc) refers to sin_x.o(i.____hardfp_sin$lsc) for ____hardfp_sin$lsc
+    sqrt.o(i.__hardfp_sqrt) refers (Special) to iusefp.o(.text) for __I$use$fp
+    sqrt.o(i.__hardfp_sqrt) refers to dsqrt.o(.text) for _dsqrt
+    sqrt.o(i.__hardfp_sqrt) refers to errno.o(i.__set_errno) for __set_errno
+    sqrt.o(i.__softfp_sqrt) refers (Special) to iusefp.o(.text) for __I$use$fp
+    sqrt.o(i.__softfp_sqrt) refers to dsqrt.o(.text) for _dsqrt
+    sqrt.o(i.__softfp_sqrt) refers to errno.o(i.__set_errno) for __set_errno
+    sqrt.o(i.sqrt) refers (Special) to iusefp.o(.text) for __I$use$fp
+    sqrt.o(i.sqrt) refers to dsqrt.o(.text) for _dsqrt
+    sqrt.o(i.sqrt) refers to errno.o(i.__set_errno) for __set_errno
+    sqrt_x.o(i.____hardfp_sqrt$lsc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    sqrt_x.o(i.____hardfp_sqrt$lsc) refers to cdcmple.o(.text) for __aeabi_cdcmple
+    sqrt_x.o(i.____hardfp_sqrt$lsc) refers to errno.o(i.__set_errno) for __set_errno
+    sqrt_x.o(i.____hardfp_sqrt$lsc) refers to dsqrt.o(.text) for _dsqrt
+    sqrt_x.o(i.____softfp_sqrt$lsc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    sqrt_x.o(i.____softfp_sqrt$lsc) refers to cdcmple.o(.text) for __aeabi_cdcmple
+    sqrt_x.o(i.____softfp_sqrt$lsc) refers to errno.o(i.__set_errno) for __set_errno
+    sqrt_x.o(i.____softfp_sqrt$lsc) refers to dsqrt.o(.text) for _dsqrt
+    sqrt_x.o(i.__sqrt$lsc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    sqrt_x.o(i.__sqrt$lsc) refers to cdcmple.o(.text) for __aeabi_cdcmple
+    sqrt_x.o(i.__sqrt$lsc) refers to errno.o(i.__set_errno) for __set_errno
+    sqrt_x.o(i.__sqrt$lsc) refers to dsqrt.o(.text) for _dsqrt
     entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
     entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
     entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
@@ -15,14 +185,116 @@ Section Cross References
     entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
     entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
     entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    strtok.o(.text) refers to strtok.o(.data) for .data
+    strtok_r.o(.text) refers to strtok_r.o(.data) for .data
+    dadd.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dadd.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    dadd.o(.text) refers to llsshr.o(.text) for __aeabi_lasr
+    dadd.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dmul.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dmul.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dneg.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    f2d.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    d2f.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    d2f.o(.text) refers to fepilogue.o(.text) for _float_round
+    atan.o(i.__hardfp_atan) refers (Special) to iusefp.o(.text) for __I$use$fp
+    atan.o(i.__hardfp_atan) refers to dadd.o(.text) for __aeabi_dadd
+    atan.o(i.__hardfp_atan) refers to fpclassify.o(i.__ARM_fpclassify) for __ARM_fpclassify
+    atan.o(i.__hardfp_atan) refers to dunder.o(i.__mathlib_dbl_underflow) for __mathlib_dbl_underflow
+    atan.o(i.__hardfp_atan) refers to fabs.o(i.fabs) for fabs
+    atan.o(i.__hardfp_atan) refers to dmul.o(.text) for __aeabi_dmul
+    atan.o(i.__hardfp_atan) refers to ddiv.o(.text) for __aeabi_ddiv
+    atan.o(i.__hardfp_atan) refers to poly.o(i.__kernel_poly) for __kernel_poly
+    atan.o(i.__hardfp_atan) refers to atan.o(.constdata) for .constdata
+    atan.o(i.__softfp_atan) refers (Special) to iusefp.o(.text) for __I$use$fp
+    atan.o(i.__softfp_atan) refers to atan.o(i.__hardfp_atan) for __hardfp_atan
+    atan.o(i.atan) refers (Special) to iusefp.o(.text) for __I$use$fp
+    atan.o(i.atan) refers to atan.o(i.__hardfp_atan) for __hardfp_atan
+    atan.o(.constdata) refers (Special) to iusefp.o(.text) for __I$use$fp
+    atan_x.o(i.____hardfp_atan$lsc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    atan_x.o(i.____hardfp_atan$lsc) refers to dadd.o(.text) for __aeabi_dadd
+    atan_x.o(i.____hardfp_atan$lsc) refers to fabs.o(i.fabs) for fabs
+    atan_x.o(i.____hardfp_atan$lsc) refers to dmul.o(.text) for __aeabi_dmul
+    atan_x.o(i.____hardfp_atan$lsc) refers to ddiv.o(.text) for __aeabi_ddiv
+    atan_x.o(i.____hardfp_atan$lsc) refers to poly.o(i.__kernel_poly) for __kernel_poly
+    atan_x.o(i.____hardfp_atan$lsc) refers to atan_x.o(.constdata) for .constdata
+    atan_x.o(i.____softfp_atan$lsc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    atan_x.o(i.____softfp_atan$lsc) refers to atan_x.o(i.____hardfp_atan$lsc) for ____hardfp_atan$lsc
+    atan_x.o(i.__atan$lsc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    atan_x.o(i.__atan$lsc) refers to atan_x.o(i.____hardfp_atan$lsc) for ____hardfp_atan$lsc
+    atan_x.o(.constdata) refers (Special) to iusefp.o(.text) for __I$use$fp
+    cos_i.o(i.__kernel_cos) refers (Special) to iusefp.o(.text) for __I$use$fp
+    cos_i.o(i.__kernel_cos) refers to dfixi.o(.text) for __aeabi_d2iz
+    cos_i.o(i.__kernel_cos) refers to dmul.o(.text) for __aeabi_dmul
+    cos_i.o(i.__kernel_cos) refers to poly.o(i.__kernel_poly) for __kernel_poly
+    cos_i.o(i.__kernel_cos) refers to dadd.o(.text) for __aeabi_dsub
+    cos_i.o(i.__kernel_cos) refers to cos_i.o(.constdata) for .constdata
+    cos_i.o(.constdata) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dunder.o(i.__mathlib_dbl_underflow) refers to dmul.o(.text) for __aeabi_dmul
+    fabs.o(i.__hardfp_fabs) refers (Special) to iusefp.o(.text) for __I$use$fp
+    fabs.o(i.__softfp_fabs) refers (Special) to iusefp.o(.text) for __I$use$fp
+    fabs.o(i.fabs) refers (Special) to iusefp.o(.text) for __I$use$fp
+    fpclassify.o(i.__ARM_fpclassify) refers (Special) to iusefp.o(.text) for __I$use$fp
+    poly.o(i.__kernel_poly) refers (Special) to iusefp.o(.text) for __I$use$fp
+    poly.o(i.__kernel_poly) refers to dmul.o(.text) for __aeabi_dmul
+    poly.o(i.__kernel_poly) refers to dadd.o(.text) for __aeabi_dadd
+    qnan.o(.constdata) refers (Special) to iusefp.o(.text) for __I$use$fp
+    rred.o(i.__ieee754_rem_pio2) refers (Special) to iusefp.o(.text) for __I$use$fp
+    rred.o(i.__ieee754_rem_pio2) refers to dadd.o(.text) for __aeabi_dsub
+    rred.o(i.__ieee754_rem_pio2) refers to fabs.o(i.fabs) for fabs
+    rred.o(i.__ieee754_rem_pio2) refers to dmul.o(.text) for __aeabi_dmul
+    rred.o(i.__ieee754_rem_pio2) refers to dfixi.o(.text) for __aeabi_d2iz
+    rred.o(i.__ieee754_rem_pio2) refers to dflti.o(.text) for __aeabi_i2d
+    rred.o(i.__ieee754_rem_pio2) refers to dfltui.o(.text) for __aeabi_ui2d
+    rred.o(i.__ieee754_rem_pio2) refers to rred.o(.constdata) for .constdata
+    rred.o(i.__use_accurate_range_reduction) refers (Special) to iusefp.o(.text) for __I$use$fp
+    rred.o(.constdata) refers (Special) to iusefp.o(.text) for __I$use$fp
+    sin_i.o(i.__kernel_sin) refers (Special) to iusefp.o(.text) for __I$use$fp
+    sin_i.o(i.__kernel_sin) refers to fpclassify.o(i.__ARM_fpclassify) for __ARM_fpclassify
+    sin_i.o(i.__kernel_sin) refers to dunder.o(i.__mathlib_dbl_underflow) for __mathlib_dbl_underflow
+    sin_i.o(i.__kernel_sin) refers to dmul.o(.text) for __aeabi_dmul
+    sin_i.o(i.__kernel_sin) refers to poly.o(i.__kernel_poly) for __kernel_poly
+    sin_i.o(i.__kernel_sin) refers to dadd.o(.text) for __aeabi_dsub
+    sin_i.o(i.__kernel_sin) refers to sin_i.o(.constdata) for .constdata
+    sin_i.o(.constdata) refers (Special) to iusefp.o(.text) for __I$use$fp
+    sin_i_x.o(i.____kernel_sin$lsc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    sin_i_x.o(i.____kernel_sin$lsc) refers to dmul.o(.text) for __aeabi_dmul
+    sin_i_x.o(i.____kernel_sin$lsc) refers to poly.o(i.__kernel_poly) for __kernel_poly
+    sin_i_x.o(i.____kernel_sin$lsc) refers to dadd.o(.text) for __aeabi_dsub
+    sin_i_x.o(i.____kernel_sin$lsc) refers to sin_i_x.o(.constdata) for .constdata
+    sin_i_x.o(.constdata) refers (Special) to iusefp.o(.text) for __I$use$fp
     entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
     entry2.o(.ARM.Collect$$$$00002712) refers to startup_tm4c123.o(STACK) for __initial_sp
     entry2.o(__vectab_stack_and_reset_area) refers to startup_tm4c123.o(STACK) for __initial_sp
     entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
     entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
-    entry9a.o(.ARM.Collect$$$$0000000B) refers to app.o(.text) for main
-    entry9b.o(.ARM.Collect$$$$0000000C) refers to app.o(.text) for main
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to main.o(.text) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to main.o(.text) for main
+    errno.o(i.__aeabi_errno_addr) refers to errno.o(.data) for .data
+    errno.o(i.__read_errno) refers to errno.o(.data) for .data
+    errno.o(i.__set_errno) refers to errno.o(.data) for .data
+    strtod.o(.text) refers to scanf_fp.o(.text) for _scanf_real
+    strtod.o(.text) refers to _sgetc.o(.text) for _sgetc
+    strtod.o(.text) refers to isspace_c.o(.text) for isspace
+    depilogue.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    depilogue.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    ddiv.o(.text) refers to depilogue.o(.text) for _double_round
+    dsqrt.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    dsqrt.o(.text) refers to depilogue.o(.text) for _double_round
+    dflti.o(.text) refers to depilogue.o(.text) for _double_epilogue
     init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+    isspace_c.o(.text) refers to ctype_c.o(.text) for __ctype_lookup
+    scanf_fp.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    scanf_fp.o(.text) refers to dfltul.o(.text) for __aeabi_ul2d
+    scanf_fp.o(.text) refers to dmul.o(.text) for __aeabi_dmul
+    scanf_fp.o(.text) refers to ddiv.o(.text) for __aeabi_ddiv
+    scanf_fp.o(.text) refers to scanf_fp.o(i._is_digit) for _is_digit
+    scanf_fp.o(.text) refers to d2f.o(.text) for __aeabi_d2f
+    dfltui.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dfixi.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    ctype_c.o(.text) refers to ctype_c.o(.constdata) for .constdata
+    dfltul.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    scanf_fp.o(i._is_digit) refers (Special) to iusefp.o(.text) for __I$use$fp
 
 
 ==============================================================================
@@ -30,8 +302,10 @@ Section Cross References
 Removing Unused input sections from the image.
 
     Removing startup_tm4c123.o(HEAP), (0 bytes).
+    Removing dneg.o(.text), (6 bytes).
+    Removing cdcmple.o(.text), (40 bytes).
 
-1 unused section(s) (total 0 bytes) removed from the image.
+3 unused section(s) (total 46 bytes) removed from the image.
 
 ==============================================================================
 
@@ -42,21 +316,84 @@ Image Symbol Table
     Symbol Name                              Value     Ov Type        Size  Object(Section)
 
     RESET                                    0x00000000   Section      620  startup_tm4c123.o(RESET)
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/ctype/ctype.c           0x00000000   Number         0  ctype_c.o ABSOLUTE
+    ../clib/microlib/ctype/ctype.c           0x00000000   Number         0  isspace_c.o ABSOLUTE
+    ../clib/microlib/errno.c                 0x00000000   Number         0  errno.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
     ../clib/microlib/string/strcmp.c         0x00000000   Number         0  strcmp.o ABSOLUTE
-    APP\APP.c                                0x00000000   Number         0  app.o ABSOLUTE
+    ../clib/microlib/string/strcpy.c         0x00000000   Number         0  strcpy.o ABSOLUTE
+    ../clib/microlib/string/strlen.c         0x00000000   Number         0  strlen.o ABSOLUTE
+    ../clib/microlib/string/strtok.c         0x00000000   Number         0  strtok_r.o ABSOLUTE
+    ../clib/microlib/string/strtok.c         0x00000000   Number         0  strtok.o ABSOLUTE
+    ../clib/microlib/stubs.s                 0x00000000   Number         0  iusefp.o ABSOLUTE
+    ../clib/scanf.c                          0x00000000   Number         0  _sgetc.o ABSOLUTE
+    ../clib/scanf.c                          0x00000000   Number         0  scanf_fp.o ABSOLUTE
+    ../clib/scanf.c                          0x00000000   Number         0  strtod.o ABSOLUTE
+    ../fplib/microlib/d2f.c                  0x00000000   Number         0  d2f.o ABSOLUTE
+    ../fplib/microlib/f2d.c                  0x00000000   Number         0  f2d.o ABSOLUTE
+    ../fplib/microlib/fpadd.c                0x00000000   Number         0  dadd.o ABSOLUTE
+    ../fplib/microlib/fpdiv.c                0x00000000   Number         0  ddiv.o ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  fepilogue.o ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  depilogue.o ABSOLUTE
+    ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixi.o ABSOLUTE
+    ../fplib/microlib/fpflt.c                0x00000000   Number         0  dfltui.o ABSOLUTE
+    ../fplib/microlib/fpflt.c                0x00000000   Number         0  dflti.o ABSOLUTE
+    ../fplib/microlib/fpflt.c                0x00000000   Number         0  dfltul.o ABSOLUTE
+    ../fplib/microlib/fpmul.c                0x00000000   Number         0  dmul.o ABSOLUTE
+    ../fplib/microlib/fpneg.c                0x00000000   Number         0  dneg.o ABSOLUTE
+    ../fplib/microlib/fpscalb.c              0x00000000   Number         0  dscalb.o ABSOLUTE
+    ../fplib/microlib/fpsqrt.c               0x00000000   Number         0  dsqrt.o ABSOLUTE
+    ../mathlib/atan.c                        0x00000000   Number         0  atan.o ABSOLUTE
+    ../mathlib/atan.c                        0x00000000   Number         0  atan_x.o ABSOLUTE
+    ../mathlib/atan2.c                       0x00000000   Number         0  atan2.o ABSOLUTE
+    ../mathlib/atan2.c                       0x00000000   Number         0  atan2_x.o ABSOLUTE
+    ../mathlib/atof.c                        0x00000000   Number         0  atof.o ABSOLUTE
+    ../mathlib/cos.c                         0x00000000   Number         0  cos.o ABSOLUTE
+    ../mathlib/cos.c                         0x00000000   Number         0  cos_x.o ABSOLUTE
+    ../mathlib/cos_i.c                       0x00000000   Number         0  cos_i.o ABSOLUTE
+    ../mathlib/dunder.c                      0x00000000   Number         0  dunder.o ABSOLUTE
+    ../mathlib/fabs.c                        0x00000000   Number         0  fabs.o ABSOLUTE
+    ../mathlib/fpclassify.c                  0x00000000   Number         0  fpclassify.o ABSOLUTE
+    ../mathlib/poly.c                        0x00000000   Number         0  poly.o ABSOLUTE
+    ../mathlib/pow.c                         0x00000000   Number         0  pow_x.o ABSOLUTE
+    ../mathlib/pow.c                         0x00000000   Number         0  pow.o ABSOLUTE
+    ../mathlib/qnan.c                        0x00000000   Number         0  qnan.o ABSOLUTE
+    ../mathlib/rred.c                        0x00000000   Number         0  rred.o ABSOLUTE
+    ../mathlib/sin.c                         0x00000000   Number         0  sin_x.o ABSOLUTE
+    ../mathlib/sin.c                         0x00000000   Number         0  sin.o ABSOLUTE
+    ../mathlib/sin_i.c                       0x00000000   Number         0  sin_i_x.o ABSOLUTE
+    ../mathlib/sin_i.c                       0x00000000   Number         0  sin_i.o ABSOLUTE
+    ../mathlib/sqrt.c                        0x00000000   Number         0  sqrt_x.o ABSOLUTE
+    ../mathlib/sqrt.c                        0x00000000   Number         0  sqrt.o ABSOLUTE
+    APP\main.c                               0x00000000   Number         0  main.o ABSOLUTE
+    APP\mainFUN.c                            0x00000000   Number         0  mainfun.o ABSOLUTE
+    HAL\GPS\GPS.c                            0x00000000   Number         0  gps.o ABSOLUTE
+    HAL\LCD\LCD.c                            0x00000000   Number         0  lcd.o ABSOLUTE
+    HAL\LED\LED.c                            0x00000000   Number         0  led.o ABSOLUTE
+    HAL\SW\SW.c                              0x00000000   Number         0  sw.o ABSOLUTE
+    HAL\SW\ext_sw.c                          0x00000000   Number         0  ext_sw.o ABSOLUTE
+    HAL\TFT\TFT.c                            0x00000000   Number         0  tft.o ABSOLUTE
+    MCAL\GPIO\DIO_Driver.c                   0x00000000   Number         0  dio_driver.o ABSOLUTE
+    MCAL\STK\Systick.c                       0x00000000   Number         0  systick.o ABSOLUTE
+    MCAL\UART0\UART0_PC.c                    0x00000000   Number         0  uart0_pc.o ABSOLUTE
+    MCAL\UART5\UART5.c                       0x00000000   Number         0  uart5.o ABSOLUTE
+    cdcmple.s                                0x00000000   Number         0  cdcmple.o ABSOLUTE
+    cdrcmple.s                               0x00000000   Number         0  cdrcmple.o ABSOLUTE
     dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
     handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
     init.s                                   0x00000000   Number         0  init.o ABSOLUTE
@@ -73,20 +410,105 @@ Image Symbol Table
     __lit__00000000                          0x0000027c   Data           4  entry2.o(.ARM.Collect$$$$00002712)
     .text                                    0x00000280   Section      244  startup_tm4c123.o(.text)
     $v0                                      0x00000280   Number         0  startup_tm4c123.o(.text)
-    .text                                    0x00000374   Section        0  app.o(.text)
-    .text                                    0x00000620   Section        0  strcmp.o(.text)
-    .text                                    0x0000063c   Section       36  init.o(.text)
-    i.__scatterload_copy                     0x00000660   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x0000066e   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x00000670   Section       14  handlers.o(i.__scatterload_zeroinit)
-    STACK                                    0x20000000   Section      512  startup_tm4c123.o(STACK)
+    .text                                    0x00000374   Section        0  led.o(.text)
+    .text                                    0x000004ac   Section        0  sw.o(.text)
+    .text                                    0x00000568   Section        0  dio_driver.o(.text)
+    .text                                    0x00000b68   Section        0  systick.o(.text)
+    .text                                    0x00000bac   Section        0  uart5.o(.text)
+    .text                                    0x00000cbc   Section        0  uart0_pc.o(.text)
+    .text                                    0x00000dcc   Section        0  main.o(.text)
+    .text                                    0x00000f80   Section        0  mainfun.o(.text)
+    .text                                    0x000013a8   Section        0  gps.o(.text)
+    .text                                    0x0000153c   Section        0  ext_sw.o(.text)
+    .text                                    0x00001590   Section        0  strlen.o(.text)
+    .text                                    0x0000159e   Section        0  strcmp.o(.text)
+    .text                                    0x000015ba   Section        0  strcpy.o(.text)
+    .text                                    0x000015cc   Section        0  strtok.o(.text)
+    .text                                    0x00001610   Section        0  dadd.o(.text)
+    .text                                    0x0000175e   Section        0  dmul.o(.text)
+    .text                                    0x00001842   Section        0  f2d.o(.text)
+    .text                                    0x00001868   Section        0  d2f.o(.text)
+    .text                                    0x000018a0   Section        0  llshl.o(.text)
+    .text                                    0x000018be   Section        0  llsshr.o(.text)
+    .text                                    0x000018e4   Section        0  strtod.o(.text)
+    _local_sscanf                            0x000018e5   Thumb Code    54  strtod.o(.text)
+    .text                                    0x00001980   Section        0  fepilogue.o(.text)
+    .text                                    0x00001980   Section        0  iusefp.o(.text)
+    .text                                    0x000019ec   Section        0  depilogue.o(.text)
+    .text                                    0x00001aaa   Section        0  ddiv.o(.text)
+    .text                                    0x00001b88   Section        0  dscalb.o(.text)
+    .text                                    0x00001bb6   Section        0  dsqrt.o(.text)
+    .text                                    0x00001c58   Section        0  dflti.o(.text)
+    .text                                    0x00001c7c   Section       40  cdrcmple.o(.text)
+    .text                                    0x00001ca4   Section       36  init.o(.text)
+    .text                                    0x00001cc8   Section        0  llushr.o(.text)
+    .text                                    0x00001ce8   Section        0  isspace_c.o(.text)
+    .text                                    0x00001cf4   Section        0  scanf_fp.o(.text)
+    _fp_value                                0x00001cf5   Thumb Code   256  scanf_fp.o(.text)
+    .text                                    0x00002030   Section        0  _sgetc.o(.text)
+    .text                                    0x00002070   Section        0  dfltui.o(.text)
+    .text                                    0x0000208a   Section        0  dfixi.o(.text)
+    .text                                    0x000020c8   Section        0  ctype_c.o(.text)
+    .text                                    0x000020f0   Section        0  dfltul.o(.text)
+    i.__ARM_fpclassify                       0x00002108   Section        0  fpclassify.o(i.__ARM_fpclassify)
+    i.__hardfp_atan                          0x00002138   Section        0  atan.o(i.__hardfp_atan)
+    i.__hardfp_atan2                         0x00002420   Section        0  atan2.o(i.__hardfp_atan2)
+    i.__hardfp_atof                          0x00002600   Section        0  atof.o(i.__hardfp_atof)
+    i.__hardfp_cos                           0x00002638   Section        0  cos.o(i.__hardfp_cos)
+    i.__hardfp_pow                           0x00002710   Section        0  pow.o(i.__hardfp_pow)
+    i.__hardfp_sin                           0x000033a0   Section        0  sin.o(i.__hardfp_sin)
+    i.__hardfp_sqrt                          0x00003478   Section        0  sqrt.o(i.__hardfp_sqrt)
+    i.__ieee754_rem_pio2                     0x000034f8   Section        0  rred.o(i.__ieee754_rem_pio2)
+    i.__kernel_cos                           0x00003950   Section        0  cos_i.o(i.__kernel_cos)
+    i.__kernel_poly                          0x00003ac0   Section        0  poly.o(i.__kernel_poly)
+    i.__kernel_sin                           0x00003bb8   Section        0  sin_i.o(i.__kernel_sin)
+    i.__mathlib_dbl_underflow                0x00003ce8   Section        0  dunder.o(i.__mathlib_dbl_underflow)
+    i.__read_errno                           0x00003d08   Section        0  errno.o(i.__read_errno)
+    i.__scatterload_copy                     0x00003d14   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x00003d22   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x00003d24   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i.__set_errno                            0x00003d34   Section        0  errno.o(i.__set_errno)
+    i._is_digit                              0x00003d40   Section        0  scanf_fp.o(i._is_digit)
+    i.atan                                   0x00003d4e   Section        0  atan.o(i.atan)
+    i.fabs                                   0x00003d5e   Section        0  fabs.o(i.fabs)
+    i.sqrt                                   0x00003d7e   Section        0  sqrt.o(i.sqrt)
+    .constdata                               0x00003df0   Section      136  pow.o(.constdata)
+    bp                                       0x00003df0   Data          16  pow.o(.constdata)
+    dp_h                                     0x00003e00   Data          16  pow.o(.constdata)
+    dp_l                                     0x00003e10   Data          16  pow.o(.constdata)
+    L                                        0x00003e20   Data          48  pow.o(.constdata)
+    P                                        0x00003e50   Data          40  pow.o(.constdata)
+    .constdata                               0x00003e78   Section      152  atan.o(.constdata)
+    atanhi                                   0x00003e78   Data          32  atan.o(.constdata)
+    atanlo                                   0x00003e98   Data          32  atan.o(.constdata)
+    aTodd                                    0x00003eb8   Data          40  atan.o(.constdata)
+    aTeven                                   0x00003ee0   Data          48  atan.o(.constdata)
+    .constdata                               0x00003f10   Section       48  cos_i.o(.constdata)
+    C                                        0x00003f10   Data          48  cos_i.o(.constdata)
+    .constdata                               0x00003f40   Section        8  qnan.o(.constdata)
+    .constdata                               0x00003f48   Section      200  rred.o(.constdata)
+    pio2s                                    0x00003f48   Data          48  rred.o(.constdata)
+    twooverpi                                0x00003f78   Data         152  rred.o(.constdata)
+    .constdata                               0x00004010   Section       40  sin_i.o(.constdata)
+    S                                        0x00004010   Data          40  sin_i.o(.constdata)
+    .constdata                               0x00004038   Section       64  ctype_c.o(.constdata)
+    .data                                    0x20000000   Section        2  sw.o(.data)
+    .data                                    0x20000004   Section       17  mainfun.o(.data)
+    .data                                    0x20000018   Section       24  gps.o(.data)
+    .data                                    0x20000030   Section        4  strtok.o(.data)
+    state                                    0x20000030   Data           4  strtok.o(.data)
+    .data                                    0x20000034   Section        4  errno.o(.data)
+    _errno                                   0x20000034   Data           4  errno.o(.data)
+    .bss                                     0x20000038   Section      800  mainfun.o(.bss)
+    .bss                                     0x20000358   Section      320  gps.o(.bss)
+    STACK                                    0x20000498   Section      512  startup_tm4c123.o(STACK)
 
     Global Symbols
 
     Symbol Name                              Value     Ov Type        Size  Object(Section)
 
-    BuildAttributes$$THM_ISAv4$E$P$D$K$B$S$7EM$VFPi3$EXTD16$VFPS$VFMA$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
-    __ARM_use_no_argv                        0x00000000   Number         0  app.o ABSOLUTE
+    BuildAttributes$$THM_ISAv4$E$P$D$K$B$S$7EM$VFPi3$EXTD16$VFPS$VFMA$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OTIME$ROPI$IEEEX$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  main.o ABSOLUTE
     __Vectors                                0x00000000   Data           4  startup_tm4c123.o(RESET)
     __cpp_initialize__aeabi_                  - Undefined Weak Reference
     __cxa_finalize                            - Undefined Weak Reference
@@ -222,25 +644,130 @@ Image Symbol Table
     PWM1_2_Handler                           0x00000369   Thumb Code     2  startup_tm4c123.o(.text)
     PWM1_3_Handler                           0x0000036b   Thumb Code     2  startup_tm4c123.o(.text)
     PWM1_FAULT_Handler                       0x0000036d   Thumb Code     2  startup_tm4c123.o(.text)
-    UART0_INIT                               0x00000375   Thumb Code   128  app.o(.text)
-    RGBLED_Init                              0x000003f5   Thumb Code   118  app.o(.text)
-    RGB_set                                  0x0000046b   Thumb Code    20  app.o(.text)
-    RGB_clear                                0x0000047f   Thumb Code    20  app.o(.text)
-    UART0_Available                          0x00000493   Thumb Code    20  app.o(.text)
-    UART0_read                               0x000004a7   Thumb Code    20  app.o(.text)
-    UART0_write                              0x000004bb   Thumb Code    20  app.o(.text)
-    getCommand                               0x000004cf   Thumb Code    46  app.o(.text)
-    printstr                                 0x000004fd   Thumb Code    22  app.o(.text)
-    main                                     0x00000513   Thumb Code   166  app.o(.text)
-    strcmp                                   0x00000621   Thumb Code    28  strcmp.o(.text)
-    __scatterload                            0x0000063d   Thumb Code    28  init.o(.text)
-    __scatterload_rt2                        0x0000063d   Thumb Code     0  init.o(.text)
-    __scatterload_copy                       0x00000661   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x0000066f   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x00000671   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    Region$$Table$$Base                      0x00000680   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x00000690   Number         0  anon$$obj.o(Region$$Table)
-    __initial_sp                             0x20000200   Data           0  startup_tm4c123.o(STACK)
+    LED_LedInit                              0x00000375   Thumb Code   130  led.o(.text)
+    LED_LedOn                                0x000003f7   Thumb Code    68  led.o(.text)
+    LED_LedOff                               0x0000043b   Thumb Code    68  led.o(.text)
+    LED_OffAll                               0x0000047f   Thumb Code    16  led.o(.text)
+    SW_Init                                  0x000004ad   Thumb Code    54  sw.o(.text)
+    SW_Read                                  0x000004e3   Thumb Code    38  sw.o(.text)
+    SW_ispressed                             0x00000509   Thumb Code    84  sw.o(.text)
+    DIO_vPORTINIT                            0x00000569   Thumb Code   568  dio_driver.o(.text)
+    DIO_vSETPINDIR                           0x000007a1   Thumb Code   276  dio_driver.o(.text)
+    DIO_vWRITEPIN                            0x000008b5   Thumb Code   444  dio_driver.o(.text)
+    DIO_vTOGGLEPIN                           0x00000a71   Thumb Code   204  dio_driver.o(.text)
+    SysTick_Init                             0x00000b69   Thumb Code    14  systick.o(.text)
+    SysTick_Wait_10ms                        0x00000b77   Thumb Code    28  systick.o(.text)
+    SysTick_Wait                             0x00000b93   Thumb Code    22  systick.o(.text)
+    UART5Init                                0x00000bad   Thumb Code   112  uart5.o(.text)
+    UART5_ReadAvailable                      0x00000c1d   Thumb Code    20  uart5.o(.text)
+    UART5_read                               0x00000c31   Thumb Code    20  uart5.o(.text)
+    UART5_write                              0x00000c45   Thumb Code    18  uart5.o(.text)
+    U5_getCommand                            0x00000c57   Thumb Code    44  uart5.o(.text)
+    UART5_Available                          0x00000c83   Thumb Code    20  uart5.o(.text)
+    U5_printstr                              0x00000c97   Thumb Code    22  uart5.o(.text)
+    UART0_INIT                               0x00000cbd   Thumb Code   128  uart0_pc.o(.text)
+    UART0_Available                          0x00000d3d   Thumb Code    20  uart0_pc.o(.text)
+    UART0_read                               0x00000d51   Thumb Code    20  uart0_pc.o(.text)
+    UART0_write                              0x00000d65   Thumb Code    20  uart0_pc.o(.text)
+    getCommand                               0x00000d79   Thumb Code    46  uart0_pc.o(.text)
+    printstr                                 0x00000da7   Thumb Code    22  uart0_pc.o(.text)
+    main                                     0x00000dcd   Thumb Code   418  main.o(.text)
+    swich2check                              0x00000f81   Thumb Code    40  mainfun.o(.text)
+    isDestination                            0x00000fa9   Thumb Code    46  mainfun.o(.text)
+    StoreINarray                             0x00000fd7   Thumb Code    68  mainfun.o(.text)
+    SWex_ispressed                           0x0000101b   Thumb Code    18  mainfun.o(.text)
+    ToDeg                                    0x0000102d   Thumb Code    60  mainfun.o(.text)
+    ToRad                                    0x00001069   Thumb Code    76  mainfun.o(.text)
+    Distance                                 0x000010b5   Thumb Code   570  mainfun.o(.text)
+    mainProgram                              0x000012ef   Thumb Code   186  mainfun.o(.text)
+    GPS_read                                 0x000013a9   Thumb Code    80  gps.o(.text)
+    GPS_format                               0x000013f9   Thumb Code   252  gps.o(.text)
+    getCurrentLongitude                      0x000014f5   Thumb Code     8  gps.o(.text)
+    getCurrentLatitude                       0x000014fd   Thumb Code     8  gps.o(.text)
+    getCurrentSpeed                          0x00001505   Thumb Code     8  gps.o(.text)
+    ex_sw_init                               0x0000153d   Thumb Code    60  ext_sw.o(.text)
+    ex_SW_Read                               0x00001579   Thumb Code    10  ext_sw.o(.text)
+    strlen                                   0x00001591   Thumb Code    14  strlen.o(.text)
+    strcmp                                   0x0000159f   Thumb Code    28  strcmp.o(.text)
+    strcpy                                   0x000015bb   Thumb Code    18  strcpy.o(.text)
+    strtok                                   0x000015cd   Thumb Code    62  strtok.o(.text)
+    __aeabi_dadd                             0x00001611   Thumb Code   322  dadd.o(.text)
+    __aeabi_dsub                             0x00001753   Thumb Code     6  dadd.o(.text)
+    __aeabi_drsub                            0x00001759   Thumb Code     6  dadd.o(.text)
+    __aeabi_dmul                             0x0000175f   Thumb Code   228  dmul.o(.text)
+    __aeabi_f2d                              0x00001843   Thumb Code    38  f2d.o(.text)
+    __aeabi_d2f                              0x00001869   Thumb Code    56  d2f.o(.text)
+    __aeabi_llsl                             0x000018a1   Thumb Code    30  llshl.o(.text)
+    _ll_shift_l                              0x000018a1   Thumb Code     0  llshl.o(.text)
+    __aeabi_lasr                             0x000018bf   Thumb Code    36  llsshr.o(.text)
+    _ll_sshift_r                             0x000018bf   Thumb Code     0  llsshr.o(.text)
+    __strtod_int                             0x0000191b   Thumb Code    88  strtod.o(.text)
+    __I$use$fp                               0x00001981   Thumb Code     0  iusefp.o(.text)
+    _float_round                             0x00001981   Thumb Code    18  fepilogue.o(.text)
+    _float_epilogue                          0x00001993   Thumb Code    90  fepilogue.o(.text)
+    _double_round                            0x000019ed   Thumb Code    26  depilogue.o(.text)
+    _double_epilogue                         0x00001a07   Thumb Code   164  depilogue.o(.text)
+    __aeabi_ddiv                             0x00001aab   Thumb Code   222  ddiv.o(.text)
+    __ARM_scalbn                             0x00001b89   Thumb Code    46  dscalb.o(.text)
+    scalbn                                   0x00001b89   Thumb Code     0  dscalb.o(.text)
+    _dsqrt                                   0x00001bb7   Thumb Code   162  dsqrt.o(.text)
+    __aeabi_i2d                              0x00001c59   Thumb Code    34  dflti.o(.text)
+    __aeabi_cdrcmple                         0x00001c7d   Thumb Code    38  cdrcmple.o(.text)
+    __scatterload                            0x00001ca5   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x00001ca5   Thumb Code     0  init.o(.text)
+    __aeabi_llsr                             0x00001cc9   Thumb Code    32  llushr.o(.text)
+    _ll_ushift_r                             0x00001cc9   Thumb Code     0  llushr.o(.text)
+    isspace                                  0x00001ce9   Thumb Code    10  isspace_c.o(.text)
+    _scanf_real                              0x00001df5   Thumb Code     0  scanf_fp.o(.text)
+    _scanf_really_real                       0x00001df5   Thumb Code   560  scanf_fp.o(.text)
+    _sgetc                                   0x00002031   Thumb Code    30  _sgetc.o(.text)
+    _sbackspace                              0x0000204f   Thumb Code    34  _sgetc.o(.text)
+    __aeabi_ui2d                             0x00002071   Thumb Code    26  dfltui.o(.text)
+    __aeabi_d2iz                             0x0000208b   Thumb Code    62  dfixi.o(.text)
+    __ctype_lookup                           0x000020c9   Thumb Code    34  ctype_c.o(.text)
+    __aeabi_ul2d                             0x000020f1   Thumb Code    24  dfltul.o(.text)
+    __ARM_fpclassify                         0x00002109   Thumb Code    48  fpclassify.o(i.__ARM_fpclassify)
+    __hardfp_atan                            0x00002139   Thumb Code   636  atan.o(i.__hardfp_atan)
+    __hardfp_atan2                           0x00002421   Thumb Code   416  atan2.o(i.__hardfp_atan2)
+    __hardfp_atof                            0x00002601   Thumb Code    44  atof.o(i.__hardfp_atof)
+    __hardfp_cos                             0x00002639   Thumb Code   200  cos.o(i.__hardfp_cos)
+    __hardfp_pow                             0x00002711   Thumb Code  3132  pow.o(i.__hardfp_pow)
+    __hardfp_sin                             0x000033a1   Thumb Code   200  sin.o(i.__hardfp_sin)
+    __hardfp_sqrt                            0x00003479   Thumb Code   122  sqrt.o(i.__hardfp_sqrt)
+    __ieee754_rem_pio2                       0x000034f9   Thumb Code   972  rred.o(i.__ieee754_rem_pio2)
+    __kernel_cos                             0x00003951   Thumb Code   322  cos_i.o(i.__kernel_cos)
+    __kernel_poly                            0x00003ac1   Thumb Code   248  poly.o(i.__kernel_poly)
+    __kernel_sin                             0x00003bb9   Thumb Code   280  sin_i.o(i.__kernel_sin)
+    __mathlib_dbl_underflow                  0x00003ce9   Thumb Code    24  dunder.o(i.__mathlib_dbl_underflow)
+    __read_errno                             0x00003d09   Thumb Code     6  errno.o(i.__read_errno)
+    __scatterload_copy                       0x00003d15   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x00003d23   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x00003d25   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    __set_errno                              0x00003d35   Thumb Code     6  errno.o(i.__set_errno)
+    _is_digit                                0x00003d41   Thumb Code    14  scanf_fp.o(i._is_digit)
+    atan                                     0x00003d4f   Thumb Code    16  atan.o(i.atan)
+    fabs                                     0x00003d5f   Thumb Code    32  fabs.o(i.fabs)
+    sqrt                                     0x00003d7f   Thumb Code   110  sqrt.o(i.sqrt)
+    __mathlib_zero                           0x00003f40   Data           8  qnan.o(.constdata)
+    __ctype_categories                       0x00004038   Data          64  ctype_c.o(.constdata)
+    Region$$Table$$Base                      0x00004078   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00004098   Number         0  anon$$obj.o(Region$$Table)
+    button_in                                0x20000000   Data           1  sw.o(.data)
+    button_prev                              0x20000001   Data           1  sw.o(.data)
+    destLongitude                            0x20000004   Data           4  mainfun.o(.data)
+    destLatitude                             0x20000008   Data           4  mainfun.o(.data)
+    i                                        0x2000000c   Data           1  mainfun.o(.data)
+    distance                                 0x20000010   Data           4  mainfun.o(.data)
+    swich2                                   0x20000014   Data           1  mainfun.o(.data)
+    GPS_logName                              0x20000018   Data           8  gps.o(.data)
+    currentLongitude                         0x20000020   Data           4  gps.o(.data)
+    currentLatitude                          0x20000024   Data           4  gps.o(.data)
+    currentSpeed                             0x20000028   Data           4  gps.o(.data)
+    token                                    0x2000002c   Data           4  gps.o(.data)
+    lon_lat                                  0x20000038   Data         800  mainfun.o(.bss)
+    GPS                                      0x20000358   Data          80  gps.o(.bss)
+    GPS_formated                             0x200003a8   Data         240  gps.o(.bss)
+    __initial_sp                             0x20000698   Data           0  startup_tm4c123.o(STACK)
 
 
 
@@ -250,43 +777,119 @@ Memory Map of the image
 
   Image Entry point : 0x00000281
 
-  Load Region LR_1 (Base: 0x00000000, Size: 0x00000690, Max: 0xffffffff, ABSOLUTE)
+  Load Region LR_1 (Base: 0x00000000, Size: 0x000040d0, Max: 0xffffffff, ABSOLUTE)
 
-    Execution Region ER_RO (Base: 0x00000000, Size: 0x00000690, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RO (Base: 0x00000000, Size: 0x00004098, Max: 0xffffffff, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x00000000   0x0000026c   Data   RO            3    RESET               startup_tm4c123.o
-    0x0000026c   0x00000000   Code   RO           32  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x0000026c   0x00000004   Code   RO           37    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x00000270   0x00000004   Code   RO           40    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x00000274   0x00000000   Code   RO           42    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x00000274   0x00000000   Code   RO           44    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x00000274   0x00000008   Code   RO           45    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x0000027c   0x00000000   Code   RO           47    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
-    0x0000027c   0x00000000   Code   RO           49    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
-    0x0000027c   0x00000004   Code   RO           38    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x0000026c   0x00000000   Code   RO          354  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x0000026c   0x00000004   Code   RO          420    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x00000270   0x00000004   Code   RO          423    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x00000274   0x00000000   Code   RO          425    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x00000274   0x00000000   Code   RO          427    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x00000274   0x00000008   Code   RO          428    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x0000027c   0x00000000   Code   RO          430    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x0000027c   0x00000000   Code   RO          432    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x0000027c   0x00000004   Code   RO          421    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
     0x00000280   0x000000f4   Code   RO            4  * .text               startup_tm4c123.o
-    0x00000374   0x000002ac   Code   RO           10    .text               app.o
-    0x00000620   0x0000001c   Code   RO           35    .text               mc_w.l(strcmp.o)
-    0x0000063c   0x00000024   Code   RO           51    .text               mc_w.l(init.o)
-    0x00000660   0x0000000e   Code   RO           55    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x0000066e   0x00000002   Code   RO           56    i.__scatterload_null  mc_w.l(handlers.o)
-    0x00000670   0x0000000e   Code   RO           57    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x0000067e   0x00000002   PAD
-    0x00000680   0x00000010   Data   RO           53    Region$$Table       anon$$obj.o
+    0x00000374   0x00000138   Code   RO           35    .text               led.o
+    0x000004ac   0x000000bc   Code   RO           56    .text               sw.o
+    0x00000568   0x00000600   Code   RO           93    .text               dio_driver.o
+    0x00000b68   0x00000044   Code   RO          114    .text               systick.o
+    0x00000bac   0x00000110   Code   RO          132    .text               uart5.o
+    0x00000cbc   0x00000110   Code   RO          159    .text               uart0_pc.o
+    0x00000dcc   0x000001b4   Code   RO          177    .text               main.o
+    0x00000f80   0x00000428   Code   RO          226    .text               mainfun.o
+    0x000013a8   0x00000194   Code   RO          246    .text               gps.o
+    0x0000153c   0x00000054   Code   RO          271    .text               ext_sw.o
+    0x00001590   0x0000000e   Code   RO          357    .text               mc_w.l(strlen.o)
+    0x0000159e   0x0000001c   Code   RO          359    .text               mc_w.l(strcmp.o)
+    0x000015ba   0x00000012   Code   RO          361    .text               mc_w.l(strcpy.o)
+    0x000015cc   0x00000044   Code   RO          363    .text               mc_w.l(strtok.o)
+    0x00001610   0x0000014e   Code   RO          369    .text               mf_w.l(dadd.o)
+    0x0000175e   0x000000e4   Code   RO          371    .text               mf_w.l(dmul.o)
+    0x00001842   0x00000026   Code   RO          375    .text               mf_w.l(f2d.o)
+    0x00001868   0x00000038   Code   RO          377    .text               mf_w.l(d2f.o)
+    0x000018a0   0x0000001e   Code   RO          434    .text               mc_w.l(llshl.o)
+    0x000018be   0x00000024   Code   RO          436    .text               mc_w.l(llsshr.o)
+    0x000018e2   0x00000002   PAD
+    0x000018e4   0x0000009c   Code   RO          445    .text               mc_w.l(strtod.o)
+    0x00001980   0x00000000   Code   RO          447    .text               mc_w.l(iusefp.o)
+    0x00001980   0x0000006c   Code   RO          448    .text               mf_w.l(fepilogue.o)
+    0x000019ec   0x000000be   Code   RO          450    .text               mf_w.l(depilogue.o)
+    0x00001aaa   0x000000de   Code   RO          452    .text               mf_w.l(ddiv.o)
+    0x00001b88   0x0000002e   Code   RO          454    .text               mf_w.l(dscalb.o)
+    0x00001bb6   0x000000a2   Code   RO          456    .text               mf_w.l(dsqrt.o)
+    0x00001c58   0x00000022   Code   RO          458    .text               mf_w.l(dflti.o)
+    0x00001c7a   0x00000002   PAD
+    0x00001c7c   0x00000028   Code   RO          462    .text               mf_w.l(cdrcmple.o)
+    0x00001ca4   0x00000024   Code   RO          464    .text               mc_w.l(init.o)
+    0x00001cc8   0x00000020   Code   RO          466    .text               mc_w.l(llushr.o)
+    0x00001ce8   0x0000000a   Code   RO          468    .text               mc_w.l(isspace_c.o)
+    0x00001cf2   0x00000002   PAD
+    0x00001cf4   0x0000033c   Code   RO          470    .text               mc_w.l(scanf_fp.o)
+    0x00002030   0x00000040   Code   RO          474    .text               mc_w.l(_sgetc.o)
+    0x00002070   0x0000001a   Code   RO          476    .text               mf_w.l(dfltui.o)
+    0x0000208a   0x0000003e   Code   RO          478    .text               mf_w.l(dfixi.o)
+    0x000020c8   0x00000028   Code   RO          480    .text               mc_w.l(ctype_c.o)
+    0x000020f0   0x00000018   Code   RO          483    .text               mf_w.l(dfltul.o)
+    0x00002108   0x00000030   Code   RO          404    i.__ARM_fpclassify  m_wm.l(fpclassify.o)
+    0x00002138   0x000002e8   Code   RO          379    i.__hardfp_atan     m_wm.l(atan.o)
+    0x00002420   0x000001e0   Code   RO          286    i.__hardfp_atan2    m_wm.l(atan2.o)
+    0x00002600   0x00000038   Code   RO          298    i.__hardfp_atof     m_wm.l(atof.o)
+    0x00002638   0x000000d8   Code   RO          304    i.__hardfp_cos      m_wm.l(cos.o)
+    0x00002710   0x00000c90   Code   RO          316    i.__hardfp_pow      m_wm.l(pow.o)
+    0x000033a0   0x000000d8   Code   RO          330    i.__hardfp_sin      m_wm.l(sin.o)
+    0x00003478   0x0000007a   Code   RO          342    i.__hardfp_sqrt     m_wm.l(sqrt.o)
+    0x000034f2   0x00000006   PAD
+    0x000034f8   0x00000458   Code   RO          409    i.__ieee754_rem_pio2  m_wm.l(rred.o)
+    0x00003950   0x00000170   Code   RO          393    i.__kernel_cos      m_wm.l(cos_i.o)
+    0x00003ac0   0x000000f8   Code   RO          406    i.__kernel_poly     m_wm.l(poly.o)
+    0x00003bb8   0x00000130   Code   RO          414    i.__kernel_sin      m_wm.l(sin_i.o)
+    0x00003ce8   0x00000020   Code   RO          396    i.__mathlib_dbl_underflow  m_wm.l(dunder.o)
+    0x00003d08   0x0000000c   Code   RO          439    i.__read_errno      mc_w.l(errno.o)
+    0x00003d14   0x0000000e   Code   RO          487    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x00003d22   0x00000002   Code   RO          488    i.__scatterload_null  mc_w.l(handlers.o)
+    0x00003d24   0x0000000e   Code   RO          489    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x00003d32   0x00000002   PAD
+    0x00003d34   0x0000000c   Code   RO          440    i.__set_errno       mc_w.l(errno.o)
+    0x00003d40   0x0000000e   Code   RO          472    i._is_digit         mc_w.l(scanf_fp.o)
+    0x00003d4e   0x00000010   Code   RO          381    i.atan              m_wm.l(atan.o)
+    0x00003d5e   0x00000020   Code   RO          400    i.fabs              m_wm.l(fabs.o)
+    0x00003d7e   0x0000006e   Code   RO          344    i.sqrt              m_wm.l(sqrt.o)
+    0x00003dec   0x00000004   PAD
+    0x00003df0   0x00000088   Data   RO          319    .constdata          m_wm.l(pow.o)
+    0x00003e78   0x00000098   Data   RO          382    .constdata          m_wm.l(atan.o)
+    0x00003f10   0x00000030   Data   RO          394    .constdata          m_wm.l(cos_i.o)
+    0x00003f40   0x00000008   Data   RO          408    .constdata          m_wm.l(qnan.o)
+    0x00003f48   0x000000c8   Data   RO          411    .constdata          m_wm.l(rred.o)
+    0x00004010   0x00000028   Data   RO          415    .constdata          m_wm.l(sin_i.o)
+    0x00004038   0x00000040   Data   RO          481    .constdata          mc_w.l(ctype_c.o)
+    0x00004078   0x00000020   Data   RO          485    Region$$Table       anon$$obj.o
 
 
-    Execution Region ER_RW (Base: 0x20000000, Size: 0x00000000, Max: 0xffffffff, ABSOLUTE)
-
-    **** No section assigned to this execution region ****
-
-
-    Execution Region ER_ZI (Base: 0x20000000, Size: 0x00000200, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RW (Base: 0x20000000, Size: 0x00000038, Max: 0xffffffff, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x00000200   Zero   RW            1    STACK               startup_tm4c123.o
+    0x20000000   0x00000002   Data   RW           57    .data               sw.o
+    0x20000002   0x00000002   PAD
+    0x20000004   0x00000011   Data   RW          228    .data               mainfun.o
+    0x20000015   0x00000003   PAD
+    0x20000018   0x00000018   Data   RW          248    .data               gps.o
+    0x20000030   0x00000004   Data   RW          364    .data               mc_w.l(strtok.o)
+    0x20000034   0x00000004   Data   RW          441    .data               mc_w.l(errno.o)
+
+
+    Execution Region ER_ZI (Base: 0x20000038, Size: 0x00000660, Max: 0xffffffff, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000038   0x00000320   Zero   RW          227    .bss                mainfun.o
+    0x20000358   0x00000140   Zero   RW          247    .bss                gps.o
+    0x20000498   0x00000200   Zero   RW            1    STACK               startup_tm4c123.o
 
 
 ==============================================================================
@@ -296,18 +899,45 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       684        104          0          0          0       6803   app.o
+      1536        172          0          0          0       1684   dio_driver.o
+        84         14          0          0          0        700   ext_sw.o
+       404         48          0         24        320       2256   gps.o
+         0          0          0          0          0       1444   lcd.o
+       312         30          0          0          0        994   led.o
+       436         18          0          0          0        931   main.o
+      1064         60          0         17        800       3556   mainfun.o
        244          6        620          0        512       5344   startup_tm4c123.o
+       188         12          0          2          0       1415   sw.o
+        68          4          0          0          0        994   systick.o
+       272         16          0          0          0       1636   uart0_pc.o
+       272         16          0          0          0       4565   uart5.o
 
     ----------------------------------------------------------------------
-       928        110        636          0        512      12147   Object Totals
-         0          0         16          0          0          0   (incl. Generated)
-         0          0          0          0          0          0   (incl. Padding)
+      4880        396        652         48       1632      25519   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+         0          0          0          5          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
 
+       760        108        152          0          0        344   atan.o
+       480         64          0          0          0        156   atan2.o
+        56         12          0          0          0        132   atof.o
+       216         16          0          0          0        152   cos.o
+       368         46         48          0          0        200   cos_i.o
+        32          8          0          0          0        124   dunder.o
+        32          0          0          0          0        124   fabs.o
+        48          0          0          0          0        124   fpclassify.o
+       248          0          0          0          0        152   poly.o
+      3216        310        136          0          0        216   pow.o
+         0          0          8          0          0          0   qnan.o
+      1112        140        200          0          0        188   rred.o
+       216         16          0          0          0        152   sin.o
+       304         24         40          0          0        208   sin_i.o
+       232          0          0          0          0        296   sqrt.o
+        64          0          0          0          0         84   _sgetc.o
+        40          6         64          0          0         68   ctype_c.o
          0          0          0          0          0          0   entry.o
          0          0          0          0          0          0   entry10a.o
          0          0          0          0          0          0   entry11a.o
@@ -316,22 +946,49 @@ Image component sizes
          0          0          0          0          0          0   entry7b.o
          0          0          0          0          0          0   entry8b.o
          8          4          0          0          0          0   entry9a.o
+        24         12          0          4          0        136   errno.o
         30          0          0          0          0          0   handlers.o
         36          8          0          0          0         68   init.o
+        10          0          0          0          0         68   isspace_c.o
+         0          0          0          0          0          0   iusefp.o
+        30          0          0          0          0         68   llshl.o
+        36          0          0          0          0         68   llsshr.o
+        32          0          0          0          0         68   llushr.o
+       842         12          0          0          0        216   scanf_fp.o
         28          0          0          0          0         76   strcmp.o
+        18          0          0          0          0         68   strcpy.o
+        14          0          0          0          0         68   strlen.o
+       156         14          0          0          0        120   strtod.o
+        68          6          0          4          0         80   strtok.o
+        40          2          0          0          0         68   cdrcmple.o
+        56          0          0          0          0         88   d2f.o
+       334          0          0          0          0        148   dadd.o
+       222          0          0          0          0        100   ddiv.o
+       190          0          0          0          0        176   depilogue.o
+        62          0          0          0          0         80   dfixi.o
+        34          0          0          0          0         76   dflti.o
+        26          0          0          0          0         76   dfltui.o
+        24          0          0          0          0         76   dfltul.o
+       228          0          0          0          0         96   dmul.o
+        46          0          0          0          0         80   dscalb.o
+       162          0          0          0          0        100   dsqrt.o
+        38          0          0          0          0         68   f2d.o
+       108          0          0          0          0        168   fepilogue.o
 
     ----------------------------------------------------------------------
-       116         16          0          0          0        144   Library Totals
-         2          0          0          0          0          0   (incl. Padding)
+     10356        812        648          8          0       5224   Library Totals
+        18          0          0          0          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
 
-       114         16          0          0          0        144   mc_w.l
+      7320        744        584          0          0       2568   m_wm.l
+      1448         66         64          8          0       1256   mc_w.l
+      1570          2          0          0          0       1400   mf_w.l
 
     ----------------------------------------------------------------------
-       116         16          0          0          0        144   Library Totals
+     10356        812        648          8          0       5224   Library Totals
 
     ----------------------------------------------------------------------
 
@@ -340,15 +997,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      1044        126        636          0        512      12291   Grand Totals
-      1044        126        636          0        512      12291   ELF Image Totals
-      1044        126        636          0          0          0   ROM Totals
+     15236       1208       1300         56       1632      26091   Grand Totals
+     15236       1208       1300         56       1632      26091   ELF Image Totals
+     15236       1208       1300         56          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 1680 (   1.64kB)
-    Total RW  Size (RW Data + ZI Data)               512 (   0.50kB)
-    Total ROM Size (Code + RO Data + RW Data)       1680 (   1.64kB)
+    Total RO  Size (Code + RO Data)                16536 (  16.15kB)
+    Total RW  Size (RW Data + ZI Data)              1688 (   1.65kB)
+    Total ROM Size (Code + RO Data + RW Data)      16592 (  16.20kB)
 
 ==============================================================================
 

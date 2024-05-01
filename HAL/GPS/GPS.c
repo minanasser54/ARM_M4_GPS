@@ -27,8 +27,10 @@ void GPS_read(){
 char correct_log=1;
 char recievedChar;
 char GPSarrayCounter=0;
+
 do{	
-for(char i=0;i<strlen(GPS_logName);i++){     //Checking Correct Log	
+char i;	
+for(i=0;i<strlen(GPS_logName);i++){     //Checking Correct Log	
 if(UART5_read()!=GPS_logName[i])
     correct_log=0;          
 	 

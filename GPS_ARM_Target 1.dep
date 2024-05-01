@@ -1,6 +1,80 @@
 Dependencies for Project 'GPS_ARM', Target 'Target 1': (DO NOT MODIFY !)
-F (.\startup_TM4C123.s)(0x662403F6)(--cpu Cortex-M4.fp --pd "__EVAL SETA 1" -g --apcs=interwork --pd "__MICROLIB SETA 1"-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123--list .\startup_tm4c123.lst --xref -o .\startup_tm4c123.o --depend .\startup_tm4c123.d)
-F (.\APP\APP.c)(0x6627F775)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\app.o --omf_browse .\app.crf --depend .\app.d)
-I (APP\../UTILITIES/tm4c123gh6pm.h)(0x65C6061C)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C80BA4)
-I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C80BA4)
+F (.\startup_TM4C123.s)(0x6632A61D)(--cpu Cortex-M4.fp --pd "__EVAL SETA 1" -g --apcs=interwork --pd "__MICROLIB SETA 1"-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123--list .\startup_tm4c123.lst --xref -o .\startup_tm4c123.o --depend .\startup_tm4c123.d)
+F (.\HAL\LCD\LCD.c)(0x6632A61C)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\lcd.o --omf_browse .\lcd.crf --depend .\lcd.d)
+I (HAL\LCD\LCD.h)(0x6632A61C)
+I (C:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C819B4)
+I (HAL\LCD\../../MCAL/GPIO/DIO_Driver.h)(0x6632A61C)
+I (HAL\LCD\../../MCAL/GPIO/../../UTILITIES/tm4c123gh6pm.h)(0x6632A61D)
+I (HAL\LCD\../../MCAL/GPIO/../../UTILITIES/Bit_Utilities.h)(0x6632A61D)
+I (HAL\LCD\../../UTILITIES/STD_TYPES.h)(0x6632A61D)
+F (.\HAL\LED\LED.c)(0x6632A61C)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\led.o --omf_browse .\led.crf --depend .\led.d)
+I (HAL\LED\../../UTILITIES/Bit_Utilities.h)(0x6632A61D)
+I (HAL\LED\../../UTILITIES/tm4c123gh6pm.h)(0x6632A61D)
+I (HAL\LED\../../HAL/LED/LED_interface.h)(0x6632A61C)
+F (.\HAL\SW\SW.c)(0x6632A61C)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\sw.o --omf_browse .\sw.crf --depend .\sw.d)
+I (C:\Keil\ARM\ARMCC\include\stdbool.h)(0x51C819B4)
+I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C819B4)
+I (HAL\SW\../../MCAL/GPIO/DIO_Driver.h)(0x6632A61C)
+I (HAL\SW\../../MCAL/GPIO/../../UTILITIES/tm4c123gh6pm.h)(0x6632A61D)
+I (HAL\SW\../../MCAL/GPIO/../../UTILITIES/Bit_Utilities.h)(0x6632A61D)
+I (HAL\SW\SW.h)(0x6632A61C)
+F (.\HAL\TFT\TFT.c)(0x6632A61C)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\tft.o --omf_browse .\tft.crf --depend .\tft.d)
+F (.\MCAL\GPIO\DIO_Driver.c)(0x6632A61C)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\dio_driver.o --omf_browse .\dio_driver.crf --depend .\dio_driver.d)
+I (MCAL\GPIO\../../UTILITIES/tm4c123gh6pm.h)(0x6632A61D)
+I (MCAL\GPIO\../../UTILITIES/Bit_Utilities.h)(0x6632A61D)
+I (MCAL\GPIO\DIO_Driver.h)(0x6632A61C)
+F (.\MCAL\STK\Systick.c)(0x6632C84F)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\systick.o --omf_browse .\systick.crf --depend .\systick.d)
+I (MCAL\STK\../../UTILITIES/Bit_Utilities.h)(0x6632A61D)
+I (MCAL\STK\../../UTILITIES/tm4c123gh6pm.h)(0x6632A61D)
+F (.\MCAL\UART5\UART5.c)(0x6632CCC2)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\uart5.o --omf_browse .\uart5.crf --depend .\uart5.d)
+I (MCAL\UART5\../../UTILITIES/Bit_Utilities.h)(0x6632A61D)
+I (MCAL\UART5\../../UTILITIES/tm4c123gh6pm.h)(0x6632A61D)
+I (MCAL\UART5\UART5.h)(0x6632CCD1)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C819B4)
+I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C819B4)
+F (.\MCAL\UART0\UART0_PC.c)(0x6632A61D)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\uart0_pc.o --omf_browse .\uart0_pc.crf --depend .\uart0_pc.d)
+I (MCAL\UART0\../../UTILITIES/tm4c123gh6pm.h)(0x6632A61D)
+I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C819B4)
+I (MCAL\UART0\UART0_PC.H)(0x6632CCCE)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C819B4)
+F (.\APP\main.c)(0x6632CB9B)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\main.o --omf_browse .\main.crf --depend .\main.d)
+I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C819B4)
+I (C:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C819B4)
+I (APP\../UTILITIES/tm4c123gh6pm.h)(0x6632A61D)
+I (APP\../MCAL/GPIO/DIO_Driver.h)(0x6632A61C)
+I (APP\../MCAL/GPIO/../../UTILITIES/Bit_Utilities.h)(0x6632A61D)
+I (APP\mainFUN.h)(0x6632CC1E)
+I (C:\Keil\ARM\ARMCC\include\stdbool.h)(0x51C819B4)
+I (APP\../MCAL/STK/SysTick.h)(0x6632A61D)
+I (APP\../MCAL/UART0/UART0_PC.h)(0x6632CCCE)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C819B4)
+I (APP\../MCAL/UART5/UART5.h)(0x6632CCD1)
+I (APP\../HAL/SW/SW.h)(0x6632A61C)
+I (APP\../HAL/SW/ext_SW.h)(0x6632CC33)
+I (APP\../HAL/GPS/GPS.h)(0x6632CBF3)
+I (APP\../HAL/LED/LED_interface.h)(0x6632A61C)
+F (.\APP\mainFUN.c)(0x6632CB30)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\mainfun.o --omf_browse .\mainfun.crf --depend .\mainfun.d)
+I (C:\Keil\ARM\ARMCC\include\math.h)(0x51C819B4)
+I (APP\../UTILITIES/tm4c123gh6pm.h)(0x6632A61D)
+I (APP\../MCAL/GPIO/DIO_Driver.h)(0x6632A61C)
+I (APP\../MCAL/GPIO/../../UTILITIES/Bit_Utilities.h)(0x6632A61D)
+I (APP\../MCAL/STK/SysTick.h)(0x6632A61D)
+I (APP\../HAL/SW/SW.h)(0x6632A61C)
+I (C:\Keil\ARM\ARMCC\include\stdbool.h)(0x51C819B4)
+I (APP\../HAL/SW/ext_SW.h)(0x6632CC33)
+I (APP\../HAL/GPS/GPS.h)(0x6632CBF3)
+I (APP\../HAL/LED/LED_interface.h)(0x6632A61C)
+F (.\HAL\GPS\GPS.c)(0x6632BA5A)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\gps.o --omf_browse .\gps.crf --depend .\gps.d)
+I (HAL\GPS\GPS.h)(0x6632CBF3)
+I (C:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C819B4)
+I (C:\Keil\ARM\ARMCC\include\math.h)(0x51C819B4)
+I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C819B4)
+I (HAL\GPS\../../MCAL/UART5/UART5.h)(0x6632CCD1)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C819B4)
+F (.\HAL\SW\ext_sw.c)(0x6632A61C)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\ext_sw.o --omf_browse .\ext_sw.crf --depend .\ext_sw.d)
+I (C:\Keil\ARM\ARMCC\include\stdbool.h)(0x51C819B4)
+I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C819B4)
+I (HAL\SW\../../MCAL/GPIO/DIO_Driver.h)(0x6632A61C)
+I (HAL\SW\../../MCAL/GPIO/../../UTILITIES/tm4c123gh6pm.h)(0x6632A61D)
+I (HAL\SW\../../MCAL/GPIO/../../UTILITIES/Bit_Utilities.h)(0x6632A61D)
+I (HAL\SW\ext_sw.h)(0x6632CC33)

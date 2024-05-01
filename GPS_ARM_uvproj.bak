@@ -411,11 +411,6 @@
               <FilePath>.\startup_TM4C123.s</FilePath>
             </File>
             <File>
-              <FileName>APP.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\APP\APP.c</FilePath>
-            </File>
-            <File>
               <FileName>LCD.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\HAL\LCD\LCD.c</FilePath>
@@ -454,6 +449,26 @@
               <FileName>UART0_PC.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\MCAL\UART0\UART0_PC.c</FilePath>
+            </File>
+            <File>
+              <FileName>main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\APP\main.c</FilePath>
+            </File>
+            <File>
+              <FileName>mainFUN.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\APP\mainFUN.c</FilePath>
+            </File>
+            <File>
+              <FileName>GPS.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\HAL\GPS\GPS.c</FilePath>
+            </File>
+            <File>
+              <FileName>ext_sw.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\HAL\SW\ext_sw.c</FilePath>
             </File>
           </Files>
         </Group>

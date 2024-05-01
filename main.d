@@ -1,0 +1,16 @@
+.\main.o: APP\main.c
+.\main.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\main.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\main.o: APP\../UTILITIES/tm4c123gh6pm.h
+.\main.o: APP\../MCAL/GPIO/DIO_Driver.h
+.\main.o: APP\../MCAL/GPIO/../../UTILITIES/Bit_Utilities.h
+.\main.o: APP\mainFUN.h
+.\main.o: C:\Keil\ARM\ARMCC\bin\..\include\stdbool.h
+.\main.o: APP\../MCAL/STK/SysTick.h
+.\main.o: APP\../MCAL/UART0/UART0_PC.h
+.\main.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\main.o: APP\../MCAL/UART5/UART5.h
+.\main.o: APP\../HAL/SW/SW.h
+.\main.o: APP\../HAL/SW/ext_SW.h
+.\main.o: APP\../HAL/GPS/GPS.h
+.\main.o: APP\../HAL/LED/LED_interface.h

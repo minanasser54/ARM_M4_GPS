@@ -6,15 +6,19 @@
 #include "mainFUN.h"
 #include "../MCAL/STK/SysTick.h"
 #include "../MCAL/UART0/UART0_PC.h"
+#include "../MCAL/UART5/UART5.h"
 #include "../HAL/SW/SW.h"
 #include "../HAL/SW/ext_SW.h"
 #include "../HAL/GPS/GPS.h"
 #include "../HAL/LED/LED_interface.h"
 
 //destination of asu foe
-
+extern char i;
+extern float destLongitude;
+extern float destLatitude;
+extern char swich2;
 extern float distance; // will be stored
-
+extern float lon_lat[200];
 int main(void){
 
 
@@ -29,6 +33,7 @@ DIO_vPORTINIT(DIO_PORTF);
 ex_sw_init();
 //eeprom_init();
 UART0_INIT();
+UART5Init();
 SysTick_Init();
 LED_LedInit();
 SW_Init(SW1);
@@ -39,62 +44,80 @@ SW_Init(SW2);
 
 while(1)
 {
-
+	char i;
+	for (i=0;i<swich2check();i++)
+{
+	 LED_LedOn(LED_BLUE);
+	 SysTick_Wait(200); //2s delay
+	 LED_LedOff( LED_BLUE );
+	 SysTick_Wait(200); //2s delay
+}
     if(swich2check()==1){
-         do{
-		 distance=0;
-            mainProgram();
+          distance=0;
+			
+			do{
+            
+				     mainProgram();
             }while(distance<=100);
    }
 
 
     else if(swich2check()==2){
-            do{
-		 distance=0;
+           distance=0; 
+			do{
              mainProgram();
             }while(!SW_ispressed( SW1 ));
     }
 
 
     else if(swich2check()==3){
+			 distance=0; 
             do{
-	     distance=0;
+	     
              mainProgram();
             }while(isDestination());
     }
 
 
     else if(swich2check()==4){
+			 distance=0; 
           do{
-		 distance=0;
+		
              mainProgram();
             }while(~(distance<=100 || !SW_ispressed( SW1 ) ||isDestination()));
     }
 
     distance=0;
-    int i=0;
-		LED_LedInit();
+    i=0;
 		LED_LedOn(LED_GREEN);
 
-   
 
+		
     if (SWex_ispressed())
     {
-
-    for (int i = 0; i < array_size; i++){
-			eeprom_write(lon_lat[i],i,1);
+		unsigned int i;
+    for (i = 0; i < sizeof(lon_lat); i++){
+			//eeprom_write(lon_lat[i],i,1);  //EEPROM FILE IS NOT UPLOADED YET
 		}
-    LED_LedInit();
-		LED_RED
+		
+      LED_LedOn(LED_RED);
+   
 
-    if(UART0_read()=="U")
-		for(int i=0;i<lon_lat.length;i++){
+    if(UART0_read()=='U'){
+		unsigned int i;
+		for(i=0;i<sizeof(lon_lat);i++){
         UART0_write((char)lon_lat[i]);
     }
+	}
+	}
 
 
-for (int i = 0; i < array_size; i++)
- {array[i] = 0;}
+if(true){
+unsigned int j;
+for (j = 0; j < sizeof(lon_lat); j++){
+	lon_lat[j] = 0;
+ }
+}
 	LED_OffAll();
 	//LCD_clearScreen();
    }
