@@ -13,6 +13,7 @@
 
 //destination of asu foe
 
+extern float distance; // will be stored
 
 int main(void){
 
@@ -43,7 +44,7 @@ while(1)
          do{
 		 distance=0;
             mainProgram();
-            }while(distance<=100)
+            }while(distance<=100);
    }
 
 
@@ -51,7 +52,7 @@ while(1)
             do{
 		 distance=0;
              mainProgram();
-            }while(!SW_ispressed( SW1 ))
+            }while(!SW_ispressed( SW1 ));
     }
 
 
@@ -59,7 +60,7 @@ while(1)
             do{
 	     distance=0;
              mainProgram();
-            }while(isDestination())
+            }while(isDestination());
     }
 
 
@@ -67,11 +68,11 @@ while(1)
           do{
 		 distance=0;
              mainProgram();
-            }while(~(distance<=100 || !SW_ispressed( SW1 ) ||isDestination()))
+            }while(~(distance<=100 || !SW_ispressed( SW1 ) ||isDestination()));
     }
 
     distance=0;
-    i=0;
+    int i=0;
 		LED_LedInit();
 		LED_LedOn(LED_GREEN);
 
@@ -80,9 +81,11 @@ while(1)
     if (SWex_ispressed())
     {
 
-    for (int i = 0; i < array_size; i++)
-		{eeprom_write(lon_lat[i],i,1)}
-    LED_LedInit(LED_RED);
+    for (int i = 0; i < array_size; i++){
+			eeprom_write(lon_lat[i],i,1);
+		}
+    LED_LedInit();
+		LED_RED
 
     if(UART0_read()=="U")
 		for(int i=0;i<lon_lat.length;i++){
@@ -93,6 +96,6 @@ while(1)
 for (int i = 0; i < array_size; i++)
  {array[i] = 0;}
 	LED_OffAll();
-	LCD_clearScreen();
+	//LCD_clearScreen();
    }
 }

@@ -96,14 +96,10 @@ float Distance(float currentA , float currentB , float destA ,float destB){
 return EARTH_RADIUS*Dis;
 }
 
-
-
 void mainProgram(){
   	float currentLongitude=getCurrentLongitude();
 	float currentLatitude=getCurrentLatitude();
-
 	StoreINarray(currentLongitude,currentLatitude);
-
 if(destLongitude!=0 && destLatitude!=0)
 {
 	for (int i=0;i<swich2check();i++)
@@ -113,18 +109,12 @@ if(destLongitude!=0 && destLatitude!=0)
 	 SysTick_Wait_Sec(10); //10s delay
 	 LED_LedOff( LED_BLUE );
 	 SysTick_Wait_Sec(10); //10s delay
-
-
 }
     distance+=Distance(currentLongitude, currentLatitude ,destLongitude  ,destLatitude); //data from gps
     //LCD_floating(distance); //display distance num on LCD 
   }
-
-
     destLongitude =currentLongitude;
     destLatitude =currentLatitude;
-
-
 }
 
 

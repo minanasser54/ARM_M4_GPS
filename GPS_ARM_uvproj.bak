@@ -157,7 +157,7 @@
             <CpuDllArguments></CpuDllArguments>
             <PeripheralDll></PeripheralDll>
             <PeripheralDllArguments></PeripheralDllArguments>
-            <InitializationFile></InitializationFile>
+            <InitializationFile>.\UTILITIES\DEBUGGER_INIT.ini</InitializationFile>
             <Driver>BIN\UL2CM3.DLL</Driver>
           </TargetDlls>
         </DebugOption>
@@ -439,6 +439,21 @@
               <FileName>DIO_Driver.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\MCAL\GPIO\DIO_Driver.c</FilePath>
+            </File>
+            <File>
+              <FileName>Systick.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\MCAL\STK\Systick.c</FilePath>
+            </File>
+            <File>
+              <FileName>UART5.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\MCAL\UART5\UART5.c</FilePath>
+            </File>
+            <File>
+              <FileName>UART0_PC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\MCAL\UART0\UART0_PC.c</FilePath>
             </File>
           </Files>
         </Group>
