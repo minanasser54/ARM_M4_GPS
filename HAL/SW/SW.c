@@ -1,8 +1,3 @@
-
-#include <stdbool.h>
-#include <stdio.h>
-
-#include "../../MCAL/GPIO/DIO_Driver.h"
 #include "../../UTILITIES/Bit_Utilities.h"
 #include "../../UTILITIES/tm4c123gh6pm.h"
 #include "SW.h"
@@ -14,17 +9,28 @@ unsigned char button_prev;
 
 
 
+void PORTF_Init(void)
+{
+  SET_BIT(SYSCTL_RCGCGPIO_R,5);
+	while(READ_BIT(SYSCTL_PRGPIO_R,5)==0);
+	GPIO_PORTF_LOCK_R   |= 0x4c4f434b;
+	GPIO_PORTF_CR_R     |= 0x11;
+	GPIO_PORTF_DEN_R    |= 0x11;
+	GPIO_PORTF_AMSEL_R  &= ~0x11;
+	GPIO_PORTF_PUR_R    = 0x11;	
+}
+
 void SW_Init(unsigned char S)
 {
     switch (S)
     {
     case SW1:
-        DIO_vPORTINIT(PORTF);
-        DIO_vSETPINDIR(PORTF,4,0);
+        PORTF_Init();
+        CLR_BIT(GPIO_PORTF_DIR_R, 4);
         break;
     case SW2:
-        DIO_vPORTINIT(PORTF);
-        DIO_vSETPINDIR(PORTF,0,0);
+        PORTF_Init();
+        CLR_BIT(GPIO_PORTF_DIR_R, 0);
         break;
     
     default:
