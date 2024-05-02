@@ -312,7 +312,7 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>620</TopLine>
+      <TopLine>619</TopLine>
       <CurrentLine>624</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\eeprom.c</PathWithFileName>
@@ -584,7 +584,7 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>1847</TopLine>
+      <TopLine>1846</TopLine>
       <CurrentLine>1852</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\sysctl.c</PathWithFileName>
@@ -763,7 +763,7 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>22</TopLine>
+      <TopLine>28</TopLine>
       <CurrentLine>26</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\MAIN.c</PathWithFileName>
@@ -779,8 +779,8 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>231</TopLine>
-      <CurrentLine>234</CurrentLine>
+      <TopLine>245</TopLine>
+      <CurrentLine>248</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\startup_TM4C123.s</PathWithFileName>
       <FilenameWithoutPath>startup_TM4C123.s</FilenameWithoutPath>
