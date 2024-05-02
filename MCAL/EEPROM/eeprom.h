@@ -1,6 +1,8 @@
 #ifndef EEPROM_H
 #define EEPROM_H
-#include "tm4c123gh6pm.h"
+#include "../../MCAL/GPIO/DIO_Driver.h"
+#include "../../UTILITIES/Bit_Utilities.h"
+#include "../../UTILITIES/tm4c123gh6pm.h"
 #include <stdint.h>
 #include <stdio.h>
 #include <string.h>

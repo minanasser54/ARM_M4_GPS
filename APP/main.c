@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "../UTILITIES/tm4c123gh6pm.h"
 #include "../MCAL/GPIO/DIO_Driver.h"
+#include "../MCAL/eeprom/eeprom.h"
 #include "../UTILITIES/Bit_Utilities.h"
 #include "mainFUN.h"
 #include "../MCAL/STK/SysTick.h"
@@ -31,7 +32,7 @@ DIO_vPORTINIT(DIO_PORTF);
 
 
 ex_sw_init();
-//eeprom_init();
+eeprom_init();
 UART0_INIT();
 UART5Init();
 SysTick_Init();
@@ -97,7 +98,7 @@ while(1)
     {
 		unsigned int i;
     for (i = 0; i < sizeof(lon_lat); i++){
-			//eeprom_write(lon_lat[i],i,1);  //EEPROM FILE IS NOT UPLOADED YET
+			eeprom_write(lon_lat[i],i,1);  //EEPROM FILE IS NOT UPLOADED YET
 		}
 		
       LED_LedOn(LED_RED);

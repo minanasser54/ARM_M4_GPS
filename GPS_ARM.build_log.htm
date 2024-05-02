@@ -1,0 +1,51 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\minan\ARM_M4_GPS\GPS_ARM.uvproj
+Project File Date:  05/02/2024
+
+<h2>Output:</h2>
+Rebuild target 'Target 1'
+assembling startup_TM4C123.s...
+compiling LCD.c...
+HAL\LCD\../../UTILITIES/STD_TYPES.h(13): warning:  #1-D: last line of file ends without a newline
+  #endif 
+HAL\LCD\LCD.h(103): warning:  #1-D: last line of file ends without a newline
+  #endif
+HAL\LCD\LCD.c: 2 warnings, 0 errors
+compiling LED.c...
+compiling SW.c...
+HAL\SW\SW.c(44): warning:  #111-D: statement is unreachable
+          break;
+HAL\SW\SW.c(47): warning:  #111-D: statement is unreachable
+          break;
+HAL\SW\SW.c(52): warning:  #940-D: missing return statement at end of non-void function "SW_Read"
+  }
+HAL\SW\SW.c(66): warning:  #111-D: statement is unreachable
+          button_prev = button_in;
+HAL\SW\SW.c(76): warning:  #111-D: statement is unreachable
+          button_prev = button_in;
+HAL\SW\SW.c(86): warning:  #940-D: missing return statement at end of non-void function "SW_ispressed"
+  }
+HAL\SW\SW.c: 6 warnings, 0 errors
+compiling TFT.c...
+compiling DIO_Driver.c...
+MCAL\GPIO\DIO_Driver.c(183): warning:  #1-D: last line of file ends without a newline
+  }
+MCAL\GPIO\DIO_Driver.c: 1 warning, 0 errors
+compiling Systick.c...
+compiling UART5.c...
+compiling UART0_PC.c...
+compiling main.c...
+compiling mainFUN.c...
+compiling GPS.c...
+compiling ext_sw.c...
+compiling eeprom.c...
+linking...
+Program Size: Code=16448 RO-data=1464 RW-data=60 ZI-data=1636  
+".\GPS_ARM.axf" - 0 Error(s), 9 Warning(s).
+</pre>
+</body>
+</html>

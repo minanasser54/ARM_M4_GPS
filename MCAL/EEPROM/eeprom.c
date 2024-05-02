@@ -1,7 +1,9 @@
 #include "eeprom.h"
 #include <stdint.h>
 #include <stdio.h>
-
+#include "../../MCAL/GPIO/DIO_Driver.h"
+#include "../../UTILITIES/Bit_Utilities.h"
+#include "../../UTILITIES/tm4c123gh6pm.h"
 void delay_n(int n)
 {
 	int i;
