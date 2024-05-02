@@ -4,12 +4,12 @@
 
 #define PI 3.141592654
 #define EARTH_RADIUS 6371000
-float currentLongitude,currentLatitude,currentSpeed;
-void GPS_read();
-void GPS_format();
-float getCurrentLongitude();
-float getCurrentLatitude();
-float getCurrentSpeed();
+
+void GPS_read(void);
+void GPS_format(void);
+float getCurrentLongitude(void);
+float getCurrentLatitude(void);
+float getCurrentSpeed(void);
 
 
 #endif

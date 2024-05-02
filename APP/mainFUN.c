@@ -8,16 +8,17 @@
 #include "../UTILITIES/Bit_Utilities.h"
 #include "../HAL/LED/LED_interface.h"
 
-//#define PI 3.14159265359;
-#define EARTH_RADIUS 6371000 //in meter
+
+
 #define PRESSED 0 //negative logic
-#define  finalCurrentA 100;
-#define  finalCurrentB 100;
+#define  finalCurrentA 100
+#define  finalCurrentB 100
+
 
 float destLongitude=0;
 float destLatitude= 0;
 char i=0;
-extern float distance; // will be stored
+float distance=0; // will be stored
 char swich2=0; //use to check and increase
 float lon_lat[200];
 
@@ -37,9 +38,11 @@ if ( SW_ispressed(SW2))
 bool isDestination(void)
 {
 		bool x = false;
-		if ((finalCurrentA == currentLongitude) && (finalCurrentB == currentLatitude)){
-			x=true;
+		if ( (finalCurrentA == getCurrentLongitude()) && (finalCurrentB == getCurrentLatitude()) ){
+		x=true;
 		}
+			
+		
     return x;
 }
 
@@ -72,7 +75,7 @@ return(degree+(minutes/60));
 
 float ToRad(float DegNum)
 {
-    return (DegNum*PI/180);
+    return (DegNum*(PI/180));
 }
 
 
@@ -97,24 +100,20 @@ return EARTH_RADIUS*Dis;
 }
 
 void mainProgram(){
-  	float currentLongitude=getCurrentLongitude();
-	float currentLatitude=getCurrentLatitude();
-	StoreINarray(currentLongitude,currentLatitude);
+  float currentLongitude1=getCurrentLongitude();
+	float currentLatitude1=getCurrentLatitude();
+	StoreINarray(currentLongitude1,currentLatitude1);
 if(destLongitude!=0 && destLatitude!=0)
 {
-	for (int i=0;i<swich2check();i++)
-{
-	 LED_LedInit();
-	 LED_LedOn(LED_BLUE);
-	 SysTick_Wait_Sec(10); //10s delay
-	 LED_LedOff( LED_BLUE );
-	 SysTick_Wait_Sec(10); //10s delay
-}
-    distance+=Distance(currentLongitude, currentLatitude ,destLongitude  ,destLatitude); //data from gps
+
+    distance+=Distance(currentLongitude1, currentLatitude1 ,destLongitude  ,destLatitude); //data from gps
     //LCD_floating(distance); //display distance num on LCD 
   }
-    destLongitude =currentLongitude;
-    destLatitude =currentLatitude;
+
+	
+    destLongitude =currentLongitude1;
+    destLatitude =currentLatitude1;
+	SysTick_Wait(10); //100Ms Delay
 }
 
 

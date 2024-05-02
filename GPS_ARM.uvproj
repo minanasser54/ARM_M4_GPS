@@ -470,6 +470,11 @@
               <FileType>1</FileType>
               <FilePath>.\HAL\SW\ext_sw.c</FilePath>
             </File>
+            <File>
+              <FileName>eeprom.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\MCAL\EEPROM\eeprom.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
