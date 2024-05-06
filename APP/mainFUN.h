@@ -8,6 +8,8 @@
 
 void mainProgram(void);
 
+void DynamicArray(void);
+
 float ToDeg(float Num);
 
 float ToRad(float DegNum);
