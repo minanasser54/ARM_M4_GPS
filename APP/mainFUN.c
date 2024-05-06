@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include <math.h>
 #include "../UTILITIES/tm4c123gh6pm.h"
 #include "../MCAL/GPIO/DIO_Driver.h"
@@ -20,7 +22,8 @@ float destLatitude= 0;
 char i=0;
 float distance=0; // will be stored
 char swich2=0; //use to check and increase
-float lon_lat[200];
+float lon_lat[99];
+int* ptr; 
 
 
 
@@ -99,9 +102,49 @@ float Distance(float currentA , float currentB , float destA ,float destB){
 return EARTH_RADIUS*Dis;
 }
 
+void DynamicArray() { 
+    int sizeofPtr=sizeof(ptr);
+    int size = sizeof(lon_lat); 
+  
+    int *temp = ptr; 
+  
+    // using realloc 
+    ptr = realloc(ptr, size * sizeof(float)); 
+    if (!ptr) { 
+        printf("Memory Re-allocation failed."); 
+        ptr = temp; 
+    } 
+    else { 
+        printf("Memory successfully re-allocated using "
+               "realloc.\n"); 
+    } 
+  
+
+    // inserting new elements 
+		if(true){
+		unsigned int j;
+    for (j =sizeofPtr; j <sizeofPtr+size; ++j) { 
+        ptr[j] = lon_lat[j-sizeofPtr]; 
+
+    }
+	}		
+}
+
 void mainProgram(){
-  float currentLongitude1=getCurrentLongitude();
-	float currentLatitude1=getCurrentLatitude();
+	float currentLongitude1;
+	float currentLatitude1;
+    if(sizeof(lon_lat)==99) { 
+         unsigned int j;
+        DynamicArray();
+        for (j = 0; j < sizeof(lon_lat); j++){
+	    lon_lat[j] = 0;
+        }
+    }
+
+    GPS_read();
+    GPS_format();
+ currentLongitude1=getCurrentLongitude();
+currentLatitude1=getCurrentLatitude();
 	StoreINarray(currentLongitude1,currentLatitude1);
 if(destLongitude!=0 && destLatitude!=0)
 {
@@ -115,8 +158,6 @@ if(destLongitude!=0 && destLatitude!=0)
     destLatitude =currentLatitude1;
 	SysTick_Wait(10); //100Ms Delay
 }
-
-
 
 
 

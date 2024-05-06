@@ -19,7 +19,8 @@ extern float destLongitude;
 extern float destLatitude;
 extern char swich2;
 extern float distance; // will be stored
-extern float lon_lat[200];
+extern float lon_lat[99];
+extern int* ptr; 
 int main(void){
 
 
@@ -41,11 +42,20 @@ SW_Init(SW1);
 SW_Init(SW2);
 //LCD_init();
 
-
+ptr = (int*)calloc(1,0); 
+if (ptr == NULL) { 
+        printf("Memory not allocated.\n"); 
+         
+    } 
+    else { 
+        printf("Memory successfully allocated using "
+               "calloc.\n"); 
+    } 
 
 while(1)
 {
 	char i;
+	bool EEPROMisDone=false;
 	for (i=0;i<swich2check();i++)
 {
 	 LED_LedOn(LED_BLUE);
@@ -94,24 +104,24 @@ while(1)
 
 
 		
+
     if (SWex_ispressed())
     {
 		unsigned int i;
-    for (i = 0; i < sizeof(lon_lat); i++){
-			eeprom_write(lon_lat[i],i,1);  //EEPROM FILE IS NOT UPLOADED YET
+    for (i = 0; i < sizeof(ptr); i++){
+			eeprom_write(ptr[i],i,1);  //EEPROM FILE IS NOT UPLOADED YET
 		}
 		
       LED_LedOn(LED_RED);
-   
+      EEPROMisDone=true;
+	}
 
-    if(UART0_read()=='U'){
+if((UART0_read()=='U') &  EEPROMisDone){
 		unsigned int i;
-		for(i=0;i<sizeof(lon_lat);i++){
-        UART0_write((char)lon_lat[i]);
+		for(i=0;i<sizeof(ptr);i++){
+        UART0_write((char)ptr[i]);
     }
-	}
-	}
-
+}
 
 if(true){
 unsigned int j;
