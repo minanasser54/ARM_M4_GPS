@@ -7,6 +7,8 @@
  *******************************************************************************/
 #include <stdlib.h>
 #include "../../MCAL/GPIO/DIO_Driver.h"
+#include "../../MCAL/STK/Systick.h"
+
 #include "../../UTILITIES/tm4c123gh6pm.h"
 #include "../../UTILITIES/STD_TYPES.h"
 #include "../../UTILITIES/Bit_Utilities.h"
@@ -27,9 +29,11 @@
 
 #endif
 
-/* LCD HW Ports and Pins Ids */
-#define LCD_RS_PORT_ID                 
-#define LCD_RS_PIN_ID                  
+#define LCD_RS_PIN_ID       3                    
+#define LCD_RW_PIN_ID       2           
+#define LCD_EN_PIN_ID       1   
+
+
 
 #define LCD_E_PORT_ID                  
 #define LCD_E_PIN_ID                   
@@ -38,12 +42,13 @@
 
 #if (LCD_DATA_BITS_MODE == 4)
 
-#define LCD_DB4_PIN_ID                 
-#define LCD_DB5_PIN_ID                 
-#define LCD_DB6_PIN_ID                 
-#define LCD_DB7_PIN_ID                 
+#define LCD_DB4_PIN_ID     4                 
+#define LCD_DB5_PIN_ID     5           
+#define LCD_DB6_PIN_ID     6           
+#define LCD_DB7_PIN_ID     7           
 
 #endif
+
 
 /*******************************************************************************
  *                            LCD Commands                                     *
@@ -77,22 +82,18 @@ void LCD_displayCharacter(uint8 data);
 /*
  * Display the passed string on the screen
  */
-void LCD_displayString(const char *str);
+void LCD_displayString(uint8 *str);
 
 /*
  * Move the cursor to a specified row and column index on the screen
  */
 void LCD_moveCursor(uint8 row,uint8 col);
 
-/*
- * Display the passed string in a specified row and column index on the screen
- */
-void LCD_displayStringRowColumn(uint8 row,uint8 col,const char *Str);
 
 /*
  * Display the required decimal value on the screen
  */
-void LCD_integerToString(int data);
+void LCD_integerToString(float64 data);
 
 /*
  * Send the clear screen command
