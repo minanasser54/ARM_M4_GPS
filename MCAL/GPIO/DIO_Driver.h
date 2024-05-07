@@ -20,7 +20,7 @@
 // Macros for PINS value
 //
 //*****************************************************************************
-#define DIO_OUTPUT		1
+#define DIO_OUTPUT		    1
 #define DIO_INPUT			0
 #define DIO_HIGH			1
 #define DIO_LOW				0
