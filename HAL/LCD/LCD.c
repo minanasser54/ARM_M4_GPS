@@ -25,16 +25,21 @@ void LCD_init(void)
 void LCD_sendCommand (uint8 command)
 {
     DIO_vWRITEPIN('B',LCD_RS_PIN_ID,DIO_LOW);
-    DIO_vWRITEPIN('B',LCD_RW_PIN_ID,DIO_LOW);
+    SysTick_Wait(100);
+    DIO_vWRITEPIN('B',LCD_EN_PIN_ID,DIO_HIGH);
+    SysTick_Wait(100);
 
     DIO_vWRITEPIN('B',LCD_DB4_PIN_ID,command >> 4 & 0x01);
     DIO_vWRITEPIN('B',LCD_DB5_PIN_ID,command >> 5 & 0x01);
     DIO_vWRITEPIN('B',LCD_DB6_PIN_ID,command >> 6 & 0x01);
     DIO_vWRITEPIN('B',LCD_DB7_PIN_ID,command >> 7 & 0x01);
 
-    DIO_vWRITEPIN('B',LCD_EN_PIN_ID,DIO_HIGH);
     SysTick_Wait(100);
     DIO_vWRITEPIN('B',LCD_EN_PIN_ID,DIO_LOW);
+
+    SysTick_Wait(100);
+    DIO_vWRITEPIN('B',LCD_EN_PIN_ID,DIO_HIGH);
+    SysTick_Wait(100);
 
     command = command << 4;
 
@@ -44,11 +49,9 @@ void LCD_sendCommand (uint8 command)
     DIO_vWRITEPIN('B',LCD_DB7_PIN_ID,command >> 7 & 0x01);
 
 
-    DIO_vWRITEPIN('B',LCD_EN_PIN_ID,DIO_HIGH);
     SysTick_Wait(100);
     DIO_vWRITEPIN('B',LCD_EN_PIN_ID,DIO_LOW);
-
-
+    SysTick_Wait(100);
 }
 
 void LCD_displayCharacter(uint8 data)
