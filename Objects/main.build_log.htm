@@ -1,0 +1,97 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.39.0.0
+Copyright (C) 2023 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: mina nasser, asu, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.39.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.21
+Assembler:       Armasm.exe V6.21
+Linker/Locator:  ArmLink.exe V6.21
+Library Manager: ArmAr.exe V6.21
+Hex Converter:   FromElf.exe V6.21
+CPU DLL:         SARMCM3.DLL V5.39.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      lmidk-agdi.dll V???
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+C:\Users\minan\GPS_ARM_M4\main.uvprojx
+Project File Date:  05/14/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.21', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+MCAL/EEPROM/eeprom.c(19): warning: while loop has empty body [-Wempty-body]
+   19 |         while(EEPROM_EEDONE_R & EEPROM_EEDONE_WORKING);
+      |                                                       ^
+MCAL/EEPROM/eeprom.c(19): note: put the semicolon on a separate line to silence this warning
+MCAL/EEPROM/eeprom.c(27): warning: while loop has empty body [-Wempty-body]
+   27 |         while(EEPROM_EEDONE_R & EEPROM_EEDONE_WORKING);
+      |                                                       ^
+MCAL/EEPROM/eeprom.c(27): note: put the semicolon on a separate line to silence this warning
+2 warnings generated.
+compiling eeprom.c...
+compiling Systick.c...
+compiling UART0_PC.c...
+compiling UART5.c...
+compiling DIO_Driver.c...
+compiling main.c...
+HAL/GPS/GPS.c(111): warning: address of stack memory associated with local variable 'buffer' returned [-Wreturn-stack-address]
+  111 |         return buffer;
+      |                ^~~~~~
+1 warning generated.
+compiling GPS.c...
+compiling LED.c...
+compiling ext_sw.c...
+compiling Conversion.c...
+compiling LCD.c...
+HAL/SW/SW.c(52): warning: non-void function does not return a value in all control paths [-Wreturn-type]
+   52 | }
+      | ^
+HAL/SW/SW.c(86): warning: non-void function does not return a value in all control paths [-Wreturn-type]
+   86 | }
+      | ^
+2 warnings generated.
+compiling SW.c...
+assembling startup_TM4C123.s...
+MAIN/SAVE.c(29): warning: format specifies type 'unsigned long' but the argument has type 'uint32_t' (aka 'unsigned int') [-Wformat]
+   29 |                         sprintf(buffer, "%lu", eeprom_read(j,i));
+      |                                          ~~~   ^~~~~~~~~~~~~~~~
+      |                                          %u
+1 warning generated.
+compiling SAVE.c...
+linking...
+Program Size: Code=19820 RO-data=1436 RW-data=8 ZI-data=624  
+".\Objects\main.axf" - 0 Error(s), 6 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM::CMSIS@5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.TM4C_DFP.1.1.0.pack
+                Keil::TM4C_DFP@1.1.0
+                Texas Instruments Tiva C Series Device Support and Examples
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_Target_1
+  C:/Users/minan/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/minan/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE@5.6.0
+Build Time Elapsed:  00:00:03
+</pre>
+</body>
+</html>

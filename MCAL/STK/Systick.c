@@ -1,23 +1,59 @@
-#include "../../UTILITIES/Bit_Utilities.h"
 #include "../../UTILITIES/tm4c123gh6pm.h"
-
-
+#include "Systick.h"
 
 void SysTick_Init(void){
-  NVIC_ST_CTRL_R = 0;               // disable SysTick during setup
-  NVIC_ST_CTRL_R = 0x00000005;      // enable SysTick with core clock
+  NVIC_ST_CTRL_R = 0;               
+  NVIC_ST_CTRL_R = 0x00000005;      
 }
-// The delay parameter is in units of the 80 MHz core clock. (12.5 ns)
-void SysTick_Wait_10ms(unsigned long delay){
-  NVIC_ST_RELOAD_R = delay-1;  // number of counts to wait
-  NVIC_ST_CURRENT_R = 0;       // any value written to CURRENT clears
-  while((NVIC_ST_CTRL_R&0x00010000)==0){ // wait for count flag
-  }
-}
+
+ void systick_wait_1s(void)
+ {
+	 NVIC_ST_RELOAD_R = (16000000) - 1;
+	 NVIC_ST_CURRENT_R = 0X00;
+	 while ((NVIC_ST_CTRL_R & NVIC_ST_CTRL_COUNT) == 0x00){}
+ }
+ void systick_wait_1ms(void)
+ {
+	 NVIC_ST_RELOAD_R = (16000) - 1;
+	 NVIC_ST_CURRENT_R = 0X00;
+	 while ((NVIC_ST_CTRL_R & NVIC_ST_CTRL_COUNT) == 0x00) {}
+ }
+ void systick_wait_1MICROs(void)
+ {
+	 NVIC_ST_RELOAD_R = (16) - 1;
+	 NVIC_ST_CURRENT_R = 0X00;
+	 while ((NVIC_ST_CTRL_R & NVIC_ST_CTRL_COUNT) == 0x00) {}
+ }
+ 
+ void delay_IN_ms(int total)
+ {
+	 int i;
+	 for (i = 0; i < total; i++)
+	 {
+		 systick_wait_1ms();
+	 }
+ }
+ void delay_IN_MICROs(int total)
+ {
+	 int i;
+	 for (i = 0; i < total; i++)
+	 {
+		 systick_wait_1MICROs();
+	 }
+ }
+ void delay_IN_s(int total)
+ {
+	 int i;
+	 for (i=0; i < total; i++)
+	 {
+		 systick_wait_1s();
+	 }
+ }
 
 void SysTick_Wait(unsigned long delay){
 	unsigned long i;
 	for(i=0;i<delay;i++){
-		SysTick_Wait_10ms(800000);
+		systick_wait_1ms();
+		//SysTick_Wait_10ms(80000);
 	}
 }

@@ -1,0 +1,12 @@
+--cpu Cortex-M4.fp
+".\startup_tm4c123.o"
+".\u5gps.o"
+".\uart5.o"
+".\systick.o"
+".\dio_driver.o"
+".\uart0_pc.o"
+".\gps.o"
+".\lcd.o"
+--library_type=microlib --ro-base 0x00000000 --entry 0x00000000 --rw-base 0x20000000 --entry Reset_Handler --first __Vectors --strict --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\u5gps.map" -o .\u5gps.axf

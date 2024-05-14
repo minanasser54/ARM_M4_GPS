@@ -1,0 +1,101 @@
+Dependencies for Project 'main', Target 'Target 1': (DO NOT MODIFY !)
+CompilerVersion: 6210000::V6.21::ARMCLANG
+F (.\MAIN\main.c)(0x66439117)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O0 -ffunction-sections-I./RTE/_Target_1-IC:/Users/minan/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/minan/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="539" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/main.o -MD)
+I (MAIN\..\MCAL\GPIO\..\..\UTILITIES\tm4c123gh6pm.h)(0x62053D07)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6569F662)
+I (MAIN\..\MCAL\GPIO\..\..\UTILITIES\Bit_Utilities.h)(0x66295788)
+I (MAIN\..\MCAL\STK\Systick.hIAIN\..\HAL\SW\SW.h)(0x00000000)
+I (C:\Keil_v5\ARM\ARMCLANG\include\HAL\SW\ext_sw.h)(0x00000000)
+I (MAIN\..\HAL\GPS\GPS.hNAIN\..\UTILITIES\Bit_Utilities.h)(0x00000000)
+I (MAIN\..\UTILITIES\Conversion.hTAIN\..\HAL\LED\LED_interface.h)(0x00000000)
+I (MAIN\..\MCAL\UART0\UART0_PC.hhAIN\..\MCAL\UART5\UART5.h)(0x00000000)
+I (MAIN\..\MCAL\EEPROM\eeprom.h)(0x66436398)
+I (MAIN\..\MCAL\EEPROM\..\..\MCAL\GPIO\DIO_Driver.h)(0x663A2A1E)
+I (MAIN\..\MCAL\EEPROM\..\..\UTILITIES\Bit_Utilities.h)(0x66295788)
+I (MAIN\..\MCAL\EEPROM\..\..\UTILITIES\tm4c123gh6pm.h)(0x62053D07)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x6569F662)
+I (C:\Keil_v5\ARM\ARMCLANG\include\HAL\LCD\LCD.h)(0x00000000)
+I (MAIN\..\HAL\LCD\tm4c123gh6pm.heAIN\SAVE.h)(0x00000000)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x6569F662)
+I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x6569F662)
+F (.\MCAL\GPIO\DIO_Driver.c)(0x664263AC)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O0 -ffunction-sections-I./RTE/_Target_1-IC:/Users/minan/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/minan/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="539" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/dio_driver.o -MD)
+I (MCAL\GPIO\..\..\UTILITIES\tm4c123gh6pm.h)(0x62053D07)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6569F662)
+I (MCAL\GPIO\..\..\UTILITIES\Bit_Utilities.h)(0x66295788)
+F (.\MCAL\EEPROM\eeprom.c)(0x66436393)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O0 -ffunction-sections-I./RTE/_Target_1-IC:/Users/minan/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/minan/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="539" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/eeprom.o -MD)
+I (MCAL\EEPROM\..\..\MCAL\GPIO\DIO_Driver.h)(0x663A2A1E)
+I (MCAL\EEPROM\..\..\MCAL\GPIO\..\..\UTILITIES\tm4c123gh6pm.h)(0x62053D07)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6569F662)
+I (MCAL\EEPROM\..\..\MCAL\GPIO\..\..\UTILITIES\Bit_Utilities.h)(0x66295788)
+I (MCAL\EEPROM\..\..\UTILITIES\Bit_Utilities.h)(0x66295788)
+I (MCAL\EEPROM\..\..\UTILITIES\tm4c123gh6pm.h)(0x62053D07)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x6569F662)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x6569F662)
+F (.\MCAL\STK\Systick.c)(0x6642AB2B)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O0 -ffunction-sections-I./RTE/_Target_1-IC:/Users/minan/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/minan/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="539" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/systick.o -MD)
+I (MCAL\STK\..\..\UTILITIES\tm4c123gh6pm.h)(0x62053D07)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6569F662)
+F (.\MCAL\UART0\UART0_PC.c)(0x6642C46D)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O0 -ffunction-sections-I./RTE/_Target_1-IC:/Users/minan/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/minan/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="539" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/uart0_pc.o -MD)
+I (MCAL\UART0\..\..\UTILITIES\tm4c123gh6pm.h)(0x62053D07)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6569F662)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x6569F662)
+F (.\MCAL\UART5\UART5.c)(0x66426D4F)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O0 -ffunction-sections-I./RTE/_Target_1-IC:/Users/minan/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/minan/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="539" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/uart5.o -MD)
+I (MCAL\UART5\..\..\UTILITIES\Bit_Utilities.h)(0x66295788)
+I (MCAL\UART5\..\..\UTILITIES\tm4c123gh6pm.h)(0x62053D07)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.hhCAL\UART5\UART5.h)(0x00000000)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x6569F662)
+F (.\HAL\GPS\GPS.c)(0x66437860)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O0 -ffunction-sections-I./RTE/_Target_1-IC:/Users/minan/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/minan/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="539" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/gps.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x6569F662)
+I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x6569F662)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x6569F662)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x6569F662)
+I (HAL\GPS\..\..\MCAL\UART5\UART5.h)(0x66335A0B)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6569F662)
+I (HAL\GPS\..\..\MCAL\UART0\UART0_PC.hiAL\GPS\..\..\MCAL\STK\Systick.h)(0x00000000)
+I (HAL\GPS\..\..\UTILITIES\Conversion.h)(0x663E6A9B)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x6569F662)
+F (.\HAL\LCD\LCD.c)(0x6642ACBC)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O0 -ffunction-sections-I./RTE/_Target_1-IC:/Users/minan/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/minan/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="539" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/lcd.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6569F662)
+I (C:\Users\minan\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x6642397D)
+I (C:\Users\minan\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x6642397D)
+I (C:\Users\minan\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F831E)
+I (C:\Users\minan\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F831E)
+I (C:\Users\minan\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F831E)
+I (C:\Users\minan\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F831E)
+I (C:\Users\minan\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626F831E)
+I (C:\Users\minan\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x6642397D)
+I (HAL\LCD\LCD.hnAL\LCD\..\..\UTILITIES\Bit_Utilities.h)(0x00000000)
+F (.\HAL\LED\LED.c)(0x66295788)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O0 -ffunction-sections-I./RTE/_Target_1-IC:/Users/minan/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/minan/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="539" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/led.o -MD)
+I (HAL\LED\..\..\UTILITIES\tm4c123gh6pm.h)(0x62053D07)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6569F662)
+I (HAL\LED\..\..\HAL\LED\LED_interface.h)(0x662964DF)
+F (.\HAL\SW\SW.c)(0x662974BF)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O0 -ffunction-sections-I./RTE/_Target_1-IC:/Users/minan/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/minan/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="539" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/sw.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x6569F662)
+I (HAL\SW\..\..\MCAL\GPIO\DIO_Driver.h)(0x663A2A1E)
+I (HAL\SW\..\..\MCAL\GPIO\..\..\UTILITIES\tm4c123gh6pm.h)(0x62053D07)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6569F662)
+I (HAL\SW\..\..\MCAL\GPIO\..\..\UTILITIES\Bit_Utilities.h)(0x66295788)
+I (HAL\SW\..\..\UTILITIES\Bit_Utilities.h)(0x66295788)
+I (HAL\SW\..\..\UTILITIES\tm4c123gh6pm.hhAL\SW\SW.h)(0x00000000)
+F (.\HAL\SW\ext_sw.c)(0x663295A2)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O0 -ffunction-sections-I./RTE/_Target_1-IC:/Users/minan/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/minan/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="539" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/ext_sw.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x6569F662)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x6569F662)
+I (HAL\SW\..\..\MCAL\GPIO\DIO_Driver.h)(0x663A2A1E)
+I (HAL\SW\..\..\MCAL\GPIO\..\..\UTILITIES\tm4c123gh6pm.h)(0x62053D07)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6569F662)
+I (HAL\SW\..\..\MCAL\GPIO\..\..\UTILITIES\Bit_Utilities.h)(0x66295788)
+I (HAL\SW\..\..\UTILITIES\Bit_Utilities.h)(0x66295788)
+I (HAL\SW\..\..\UTILITIES\tm4c123gh6pm.hhAL\SW\ext_sw.h)(0x00000000)
+F (.\UTILITIES\Conversion.c)(0x663E6B43)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O0 -ffunction-sections-I./RTE/_Target_1-IC:/Users/minan/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/minan/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="539" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/conversion.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x6569F662)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x6569F662)
+F (.\startup_TM4C123.s)(0x66421B45)(--target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -masm=auto  -Wa,armasm,--diag_suppress=A1950W -c-gdwarf-4 -Wa,armasm,--pd,"__MICROLIB SETA 1" -Wa,armasm,--pd,"__EVAL SETA 1"-I./RTE/_Target_1-IC:/Users/minan/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/minan/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-Wa,armasm,--pd,"__UVISION_VERSION SETA 539" -Wa,armasm,--pd,"_RTE_ SETA 1" -Wa,armasm,--pd,"TM4C123GH6PM SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1"-o ./objects/startup_tm4c123.o)
+F (.\MAIN\SAVE.c)(0x6643841C)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O0 -ffunction-sections-I./RTE/_Target_1-IC:/Users/minan/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/minan/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="539" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/save.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h\MCAL\EEPROM\eeprom.h)(0x00000000)
+I (MAIN\..\MCAL\EEPROM\..\..\MCAL\GPIO\DIO_Driver.h)(0x663A2A1E)
+I (MAIN\..\MCAL\EEPROM\..\..\MCAL\GPIO\..\..\UTILITIES\tm4c123gh6pm.h)(0x62053D07)
+I (MAIN\..\MCAL\EEPROM\..\..\MCAL\GPIO\..\..\UTILITIES\Bit_Utilities.h)(0x66295788)
+I (MAIN\..\MCAL\EEPROM\..\..\UTILITIES\Bit_Utilities.h)(0x66295788)
+I (MAIN\..\MCAL\EEPROM\..\..\UTILITIES\tm4c123gh6pm.h)(0x62053D07)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x6569F662)
+I (C:\Keil_v5\ARM\ARMCLANG\include\MCAL\UART0\UART0_PC.h)(0x00000000)
+F (.\MAIN\SAVE.h)(0x66435AE5)()
