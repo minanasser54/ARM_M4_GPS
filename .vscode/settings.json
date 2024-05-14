@@ -1,8 +1,0 @@
-{
-    "files.associations": {
-        "dio_driver.h": "c",
-        "sw.h": "c",
-        "lcd.h": "c"
-    },
-    "C_Cpp.errorSquiggles": "disabled"
-}
