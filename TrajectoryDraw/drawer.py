@@ -17,8 +17,8 @@ def draw(data_raw):
     lon_values = []
     lat_values = []
     for i in range(0, len(data_raw), 2):
-        lon_values.append(round(ToRad(ToDeg((float(data_raw[i])/10000))),6))
-        lat_values.append(round(ToRad(ToDeg((float(data_raw[i + 1])/10000))),6))
+        lon_values.append(ToRad(round(ToDeg((float(data_raw[i])/10000)),5)))
+        lat_values.append(ToRad(round(ToDeg((float(data_raw[i + 1])/10000)),5)))
 
     plt.plot(lon_values, lat_values, marker='o')
     plt.xlabel('Longitude')
@@ -31,29 +31,7 @@ print(ser.portstr+" is runing !!")
 ser.flushInput()
 ser.flushOutput()
 data_raw=[]
-# 30052704,
-# 31153288,
-# 30052898,
-# 31153290,
-# 30052898,
-# 31153298,
 
-# def GO_WAIT():
-#     if ser.in_waiting > 0:
-#         line = ser.readline().decode().strip()  # Read and decode the data
-#         print(line)
-#         if not line:
-#             draw(data_raw) # Exit loop if empty line is received
-#         data_raw.append(line) 
-
-# while True:
-#     user_input = input("Enter a character to send (or 'q' to quit): ")
-#     if user_input.lower() == 'q':
-#         break  # Exit the loop if 'q' is entered
-#     if ser.writable():
-#         ser.write(user_input.encode())  # Send the user input if writable
-#         GO_WAIT()
-    
 while True:
     if ser.writable():
         #user_input = input("Enter a U to send : ")
@@ -76,13 +54,3 @@ while True:
 ser.close()
 
     
-
-# print(msg)
-# ser.close()
-
-
-# def draw():
-#     df = pd.read_csv('example.csv')
-#     #print(df.get("lon"))
-#     plt.plot(df.get("lon"),df.get("lat"))
-#     plt.show()

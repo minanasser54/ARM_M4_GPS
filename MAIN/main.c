@@ -59,7 +59,7 @@ int main(void){
 		LED_OffAll();
 		LED_LedOn(LED_RED);	
 		LCD_CMD(clear_display);
-		LCD_String("accumulating MODE");
+		LCD_String("Accumulation Mode");
 		delay_milli(2000);	
 		do{			
 				GPS_format();
@@ -78,10 +78,10 @@ int main(void){
 					char str[32];
 					LCD_CMD(clear_display);
 					delay_milli(500);
-					LCD_String("D =");
+					LCD_String("D= ");
 					floatToString(distance, str, sizeof(str));
 					LCD_String(str); //display distance num on LCD
-					delay_milli(2000);				
+					delay_milli(3000);				
 					LCD_CMD(clear_display);
 //										printstr("\n dis = ");
 //										printstr(str);
@@ -92,7 +92,7 @@ int main(void){
 				dLat =cLat;
 				}
 							//printstr(" \n SS");
-				SysTick_Wait(6000); 
+				SysTick_Wait(4000); 
 							//printstr(" EE  \n");
 				check_mode(p);
 				if (!SW_ispressed(SW1) || mode!=1) break;
@@ -110,7 +110,7 @@ int main(void){
 			LED_LedOn(LED_GREEN);
 			LED_LedOn(LED_RED);
 			LCD_CMD(clear_display);
-			LCD_String("retrieving mode");
+			LCD_String("Retrieving Mode");
 			bool wait =true;
 			
 			do{
@@ -119,12 +119,12 @@ int main(void){
 			wait=false;
 			fetch_eeprom(); 
 			eeprom_clear();
-			}
-			check_mode(p);
+			}else{
+			check_mode(p);}
 			}while(wait && mode==2);
 			mode=0;
 			LCD_CMD(clear_display);
-			LCD_String("retrieving DONE");
+			LCD_String("Retrieving DONE");
 			SysTick_Wait(3000); 
 			LCD_CMD(clear_display);
 			LED_OffAll();
@@ -148,16 +148,21 @@ float ToDeg(float Num){
 float ToRad(float DegNum){
     return (DegNum*(PI/180));
 }
-float truncate(float copy_f32FloatValue)
-{
-    copy_f32FloatValue = floor(copy_f32FloatValue * 1000000) / (float)1000000.0;
-    return copy_f32FloatValue;
-}
+//float truncate(float copy_f32FloatValue)
+//{
+//    copy_f32FloatValue = floor(copy_f32FloatValue * 1000000) / (float)1000000.0;
+//    return copy_f32FloatValue;
+//}
+//float trun(float copy_f32FloatValue)
+//{
+//    copy_f32FloatValue = floor(copy_f32FloatValue * 1000) / (float)1000.0;
+//    return copy_f32FloatValue;
+//}
 float Distance(float currentA , float currentB , float destA ,float destB){
-    float currentA_RAD = truncate(ToRad(ToDeg(currentA)));
-    float currentB_RAD = truncate(ToRad(ToDeg(currentB)));
-    float destA_RAD = truncate(ToRad(ToDeg(destA)));
-    float destB_RAD = truncate(ToRad(ToDeg(destB)));
+    float currentA_RAD = ToRad(ToDeg(currentA));
+    float currentB_RAD = ToRad(ToDeg(currentB));
+    float destA_RAD = ToRad(ToDeg(destA));
+    float destB_RAD = ToRad(ToDeg(destB));
     float aDiff=destA_RAD-currentA_RAD;
     float bDiff=destB_RAD-currentB_RAD;
     float a=pow(sin(bDiff/2),2)+cos(currentB_RAD)*cos(destB_RAD)*pow(sin(aDiff/2),2);
