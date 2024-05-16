@@ -11,7 +11,8 @@ To get started with this project, follow these steps:
 3. Compile the project and load it onto your Tiva C microcontroller.
 4. Connect the u-blox NEO-6M GPS module to the microcontroller.
 5. Connect the LCD A1602 display to the microcontroller.
-6. Run the project and observe the longitude and latitude data on the display.
+6. Run the project and observe the distance on the display.
+7. use retreiving Mode to view walked Trajectory
 
 ## Dependencies
 
